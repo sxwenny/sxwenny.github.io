@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>test</title>
+    <url>/2020/10/15/test/</url>
+    <content><![CDATA[<a id="more"></a>]]></content>
+  </entry>
+  <entry>
     <title>Anaconda 和 Python</title>
     <url>/2020/10/15/Anaconda%E5%92%8CPython/</url>
     <content><![CDATA[<p>由于旧博客的文档没有备份，只能重新弄了github账户，重搭了博客，博客搭建参考增瑞师兄<a href="https://darlewo.cn/Github_Actions_Blog_Automation_deploying.html">Github Actions全自动博客部署</a>，<a href="https://zhuanlan.zhihu.com/p/251383216">hexo主题安装以及next8.0主题美化</a>。</p>
