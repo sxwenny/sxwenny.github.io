@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>re-ID 相关</title>
+    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
+<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
+<a id="more"></a>]]></content>
+      <categories>
+        <category>re-ID</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Anaconda 和 Python</title>
     <url>/2020/10/15/Anaconda%E5%92%8CPython/</url>
     <content><![CDATA[<p>由于旧博客的文档没有备份，只能重新弄了github账户，重搭了博客，博客搭建参考增瑞师兄<a href="https://darlewo.cn/Github_Actions_Blog_Automation_deploying.html">Github Actions全自动博客部署</a>，<a href="https://zhuanlan.zhihu.com/p/251383216">hexo主题安装以及next8.0主题美化</a>。</p>
@@ -12,18 +25,6 @@
       <tags>
         <tag>Anaconda</tag>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>re-ID 相关</title>
-    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
-<a id="more"></a>]]></content>
-      <categories>
-        <category>re-ID</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
       </tags>
   </entry>
   <entry>
