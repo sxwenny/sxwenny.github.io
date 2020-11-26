@@ -15,19 +15,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Git 相关</title>
-    <url>/2020/11/05/Git%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>Git撤销push：<a href="https://www.cnblogs.com/chaoxiZ/p/9714085.html">Git撤销对远程仓库的push&amp;commit提交</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git log</span><br><span class="line">git reset --hard &lt;版本号&gt;</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
-<a id="more"></a>]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux 相关</title>
     <url>/2020/11/20/Linux%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>记录Linux相关的命令。</p>
@@ -43,6 +30,19 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 相关</title>
+    <url>/2020/11/05/Git%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>Git撤销push：<a href="https://www.cnblogs.com/chaoxiZ/p/9714085.html">Git撤销对远程仓库的push&amp;commit提交</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git log</span><br><span class="line">git reset --hard &lt;版本号&gt;</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
+<a id="more"></a>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -66,6 +66,7 @@
 </ol>
 <p>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</p>
 <p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.</p>
+<p>根据上述假设, we propose several loss functions on the encoder and samples with guessed label. And the problem of selecting which sample with guessed label to train is optimized by minimizing the proposed loss functions.<br>For the Separately Probabilistic Lipschitzness assumption, we wish to minimize the intra-cluster and maximize inter-cluster distance. Then the sample selecting problem is turned into <strong>data clustering</strong> problem and minimizing loss functions is transformed into finding a <strong>distance metric</strong> for the data.<br>Further, another metric for Weight Ratio is designed.<br>After combining the two metrics together, we end up with a distance evaluating the confidence of the guessed labels.<br>Finally, the DBSCAN clustering method is employed to generate data clusters according to a threshold on the distance. With pseudo-labels on selected data cluster from target domain, the encoder is trained with triplet loss.</p>
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br><img src="/download/3.png"><br>假设2和3最后实现时转变成设计distance metric，计算得到的距离用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
 <p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
 ]]></content>
