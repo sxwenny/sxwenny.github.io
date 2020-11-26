@@ -66,7 +66,7 @@
 </ol>
 <p>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</p>
 <p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br>假设2和3最后实现时转变成设计distance metric，计算得到的距离用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br><img src="/download/3.png"><br>假设2和3最后实现时转变成设计distance metric，计算得到的距离用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
 <p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
 ]]></content>
       <categories>
