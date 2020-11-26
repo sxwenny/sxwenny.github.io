@@ -28,6 +28,38 @@
       </tags>
   </entry>
   <entry>
+    <title>PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</title>
+    <url>/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S003132031930473X">Unsupervised domain adaptive re-identification: Theory and practice</a><br><a href="https://github.com/LcDog/DomainAdaptiveReID">https://github.com/LcDog/DomainAdaptiveReID</a><br>Liangchen Song, Cheng Wang, Lefei Zhang, et al.<br>Wuhan University, Horizon Robotics, Huazhong University of Science and Technology.</p>
+</blockquote>
+<p>将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。</p>
+<a id="more"></a>
+
+<blockquote>
+<p>In the context of re-ID tasks, two questions are of concern:</p>
+</blockquote>
+<ol>
+<li>Under what conditions are unsupervised domain adaptive re-ID tasks DA-learnable?</li>
+<li>How does the theoretical conditions help practical algorithms?</li>
+</ol>
+<p>对于问题1，根据论文[1]对分类任务做的3个假设，提出re-ID中的3个假设：</p>
+<ol>
+<li><strong>covariate assumption</strong>: the criteria of classifying feature pairs is the same between two domains;</li>
+<li><strong>Separately Probabilistic Lipschitzness</strong>: the feature pairs can be divided into clusters;</li>
+<li><strong>weight ratio</strong>: concerning the probability of existing a repeated feature among all the features from the two domains.<br>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</li>
+</ol>
+<p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.<br><img src="/download/1.png" alt="pic"><br><img src="/download/2.png" alt="pic"></p>
+<p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux 相关</title>
     <url>/2020/11/20/Linux%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>记录Linux相关的命令。</p>
