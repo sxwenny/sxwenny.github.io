@@ -130,4 +130,21 @@
         <tag>re-ID</tag>
       </tags>
   </entry>
+  <entry>
+    <title>tmux 使用</title>
+    <url>/2020/11/27/tmux%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>参考链接：<a href="https://www.cnblogs.com/wangqiguo/p/8905081.html">tmux 终端复用详解</a>，<a href="https://www.cnblogs.com/kevingrace/p/6496899.html">Linux终端复用神器-Tmux使用梳理</a>，<a href="https://blog.csdn.net/Hungryof/article/details/90266682">Windows下用Git Bash安装tmux</a></p>
+<a id="more"></a>
+<p>终端命令 | 解释<br>:-: | :-: | :-:<br><strong>tmux new -s 会话名</strong> | 新建某个会话|<br><strong>tmux ls</strong> | 终端环境查看会话列表|<br><strong>tmux a -t 会话名</strong> | 从终端环境进入某个会话|<br><strong>tmux kill-session -t 会话名</strong> | 销毁会话|<br>tmux rename -t 旧会话名 新会话名 | 重命名会话|</p>
+<p>会话操作 | 解释<br>:-: | :-: | :-:<br><strong>ctrl+b d</strong> | 退出会话，回到shell的终端环境|<br>ctrl+b s | 会话环境查看会话列表|<br>ctrl+b : | 黄色状态栏输入命令|<br>ctrl+b ? | 列出所有快捷键；按q返回|<br>ctrl+b $ | 重命名会话（会话环境）|</p>
+<p>窗口操作 | 解释<br>:-: | :-: | :-:<br>ctrl+b , | 重命名当前窗口|<br><strong>ctrl+b c</strong> | 创建窗口|<br><strong>ctrl+b w</strong> | 查看当前会话的所有窗口|<br><strong>ctrl+b p</strong> | 切换到上一个窗口|<br>ctrl+b n | 切换到下一个窗口|<br>ctrl+b 数字 | 切换到某个序号的窗口|<br>ctrl+b l | 在前后两个窗口间互相切换|<br><strong>ctrl+b &amp;</strong> | 关闭当前窗口|</p>
+<p>面板操作 | 解释<br>:-: | :-: | :-:<br><strong>ctrl+b %</strong> | 左右分屏|<br><strong>ctrl+b “</strong> | 上下分屏|<br><strong>ctrl+b x</strong> | 关闭当前面板|<br><strong>ctrl+b z</strong> | 最大化当前面板，再按一次后恢复|<br><strong>ctrl+b o</strong> | 在当前窗口中选择下一面板|<br>ctrl+b 箭头方向 | 根据按箭方向选择切换到某个面板|<br>ctrl+b 空格键 | 对当前窗口下的所有面板重新排列布局|<br><strong>ctrl+b !</strong> | 将当前面板置于新窗口；即新建一个窗口，其中仅包含当前面板|<br><strong>ctrl+b PgUp/PgDn</strong> | 浏览历史输出，按q退出|</p>
+]]></content>
+      <categories>
+        <category>tmux</category>
+      </categories>
+      <tags>
+        <tag>tmux</tag>
+      </tags>
+  </entry>
 </search>

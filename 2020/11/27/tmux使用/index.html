@@ -23,18 +23,21 @@
     var CONFIG = {"hostname":"sxwenny.github.io","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="Learn something">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xiaowen&#39;s Blog">
-<meta property="og:url" content="https://sxwenny.github.io/categories/paper/index.html">
+  <meta name="description" content="参考链接：tmux 终端复用详解，Linux终端复用神器-Tmux使用梳理，Windows下用Git Bash安装tmux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tmux 使用">
+<meta property="og:url" content="https://sxwenny.github.io/2020/11/27/tmux%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Xiaowen&#39;s Blog">
-<meta property="og:description" content="Learn something">
+<meta property="og:description" content="参考链接：tmux 终端复用详解，Linux终端复用神器-Tmux使用梳理，Windows下用Git Bash安装tmux">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-27T01:49:52.000Z">
+<meta property="article:modified_time" content="2020-11-27T02:17:18.764Z">
 <meta property="article:author" content="Xiaowen">
+<meta property="article:tag" content="tmux">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://sxwenny.github.io/categories/paper/">
+<link rel="canonical" href="https://sxwenny.github.io/2020/11/27/tmux%E4%BD%BF%E7%94%A8/">
 
 
 <script class="page-configurations">
@@ -42,12 +45,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: paper | Xiaowen's Blog</title>
+  <title>tmux 使用 | Xiaowen's Blog</title>
   
 
 
@@ -278,54 +281,101 @@
 </noscript>
 
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
       
 
       
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">paper
-          <small>分类</small>
-        </h2>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sxwenny.github.io/2020/11/27/tmux%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar.jpg">
+      <meta itemprop="name" content="Xiaowen">
+      <meta itemprop="description" content="Learn something">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiaowen's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          tmux 使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+
+      <time title="创建时间：2020-11-27 09:49:52 / 修改时间：10:17:18" itemprop="dateCreated datePublished" datetime="2020-11-27T09:49:52+08:00">2020-11-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tmux/" itemprop="url" rel="index"><span itemprop="name">tmux</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>参考链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wangqiguo/p/8905081.html">tmux 终端复用详解</a>，<a target="_blank" rel="noopener" href="https://www.cnblogs.com/kevingrace/p/6496899.html">Linux终端复用神器-Tmux使用梳理</a>，<a target="_blank" rel="noopener" href="https://blog.csdn.net/Hungryof/article/details/90266682">Windows下用Git Bash安装tmux</a></p>
+<a id="more"></a>
+<p>终端命令 | 解释<br>:-: | :-: | :-:<br><strong>tmux new -s 会话名</strong> | 新建某个会话|<br><strong>tmux ls</strong> | 终端环境查看会话列表|<br><strong>tmux a -t 会话名</strong> | 从终端环境进入某个会话|<br><strong>tmux kill-session -t 会话名</strong> | 销毁会话|<br>tmux rename -t 旧会话名 新会话名 | 重命名会话|</p>
+<p>会话操作 | 解释<br>:-: | :-: | :-:<br><strong>ctrl+b d</strong> | 退出会话，回到shell的终端环境|<br>ctrl+b s | 会话环境查看会话列表|<br>ctrl+b : | 黄色状态栏输入命令|<br>ctrl+b ? | 列出所有快捷键；按q返回|<br>ctrl+b $ | 重命名会话（会话环境）|</p>
+<p>窗口操作 | 解释<br>:-: | :-: | :-:<br>ctrl+b , | 重命名当前窗口|<br><strong>ctrl+b c</strong> | 创建窗口|<br><strong>ctrl+b w</strong> | 查看当前会话的所有窗口|<br><strong>ctrl+b p</strong> | 切换到上一个窗口|<br>ctrl+b n | 切换到下一个窗口|<br>ctrl+b 数字 | 切换到某个序号的窗口|<br>ctrl+b l | 在前后两个窗口间互相切换|<br><strong>ctrl+b &amp;</strong> | 关闭当前窗口|</p>
+<p>面板操作 | 解释<br>:-: | :-: | :-:<br><strong>ctrl+b %</strong> | 左右分屏|<br><strong>ctrl+b “</strong> | 上下分屏|<br><strong>ctrl+b x</strong> | 关闭当前面板|<br><strong>ctrl+b z</strong> | 最大化当前面板，再按一次后恢复|<br><strong>ctrl+b o</strong> | 在当前窗口中选择下一面板|<br>ctrl+b 箭头方向 | 根据按箭方向选择切换到某个面板|<br>ctrl+b 空格键 | 对当前窗口下的所有面板重新排列布局|<br><strong>ctrl+b !</strong> | 将当前面板置于新窗口；即新建一个窗口，其中仅包含当前面板|<br><strong>ctrl+b PgUp/PgDn</strong> | 浏览历史输出，按q退出|</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-26T10:50:08+08:00"
-              content="2020-11-26">
-          11-26
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/" itemprop="url">
-            <span itemprop="name">PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/tmux/" rel="tag"># tmux</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/" rel="prev" title="PR 2020 Unsupervised domain adaptive re-identification: Theory and practice">
+                  <i class="fa fa-chevron-left"></i> PR 2020 Unsupervised domain adaptive re-identification: Theory and practice
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
 
-  
+
 
 
 
@@ -425,6 +475,50 @@
   
 
   
+      <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
