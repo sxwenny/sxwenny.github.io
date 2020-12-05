@@ -15,6 +15,29 @@
       </tags>
   </entry>
   <entry>
+    <title>ECCV 2020 Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</title>
+    <url>/2020/12/05/ECCV-2020-Unsupervised-Domain-Adaptation-with-Noise-Resistible-Mutual-Training-for-Person-Re-identification/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/1391_ECCV_2020_paper.php">Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</a><br>Fang Zhao, Shengcai Liao, Guo-Sen Xie, Jian Zhao, Kaihao Zhang, Ling Shao.<br>Inception Institute of Artificial Intelligence.</p>
+</blockquote>
+<p>行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。</p>
+<a id="more"></a>
+<hr>
+<p><strong>Mutual-Training with Collaborative Clustering</strong><br><img src="/download/4.png"></p>
+<blockquote>
+<p>Usually noisy instances caused by clustering are relatively hard examples, thus if one instance is assigned two labels, the networks will fit the clean (easy) one first to become robust and the error may be eliminated at the next iteration.</p>
+</blockquote>
+<p><strong>Mutual Instance Selection</strong><br><em>Reliable Instance Selection by Peer-Confidence</em><br><img src="/download/5.png"><br><img src="/download/6.png"><br><em>Informative Instance Selection by Relationship Disagreement</em><br><img src="/download/7.png"><br><img src="/download/8.png"><br>Only the clean and informative triplets are used for the network update.</p>
+<p><strong>Algorithm</strong><br><img src="/download/9.png"></p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux 相关</title>
     <url>/2020/11/20/Linux%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>记录Linux相关的命令。</p>
@@ -116,6 +139,104 @@
       </categories>
       <tags>
         <tag>PyTorch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>re-ID 相关</title>
+    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
+<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
+<a id="more"></a>
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
+<thead>
+<tr>
+<th align="center">Market-1501</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">12936</td>
+<td align="center">751</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">3368</td>
+<td align="center">750</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">15913/19732</td>
+<td align="center">750+1</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">DukeMTMC-reID</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">16522</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">2228</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">17661</td>
+<td align="center">702+408</td>
+<td align="center">8</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">MSMT17_V1</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">30248</td>
+<td align="center">1041</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">11659</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">82161</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>re-ID</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
       </tags>
   </entry>
   <entry>
@@ -269,104 +390,6 @@
       </categories>
       <tags>
         <tag>tmux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>re-ID 相关</title>
-    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
-<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
-<a id="more"></a>
-<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
-<thead>
-<tr>
-<th align="center">Market-1501</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">12936</td>
-<td align="center">751</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">3368</td>
-<td align="center">750</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">15913/19732</td>
-<td align="center">750+1</td>
-<td align="center">6</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">DukeMTMC-reID</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">16522</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">2228</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">17661</td>
-<td align="center">702+408</td>
-<td align="center">8</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">MSMT17_V1</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">30248</td>
-<td align="center">1041</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">11659</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">82161</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>re-ID</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
       </tags>
   </entry>
 </search>
