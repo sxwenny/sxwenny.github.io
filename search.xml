@@ -15,6 +15,38 @@
       </tags>
   </entry>
   <entry>
+    <title>PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</title>
+    <url>/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S003132031930473X">Unsupervised domain adaptive re-identification: Theory and practice</a><br><a href="https://github.com/LcDog/DomainAdaptiveReID">https://github.com/LcDog/DomainAdaptiveReID</a><br>Liangchen Song, Cheng Wang, Lefei Zhang, et al.<br>Wuhan University, Horizon Robotics, Huazhong University of Science and Technology.</p>
+</blockquote>
+<p>将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。</p>
+<a id="more"></a>
+<hr>
+<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><p><img src="/download/1.png"></p>
+<blockquote>
+<p>In the context of re-ID tasks, two questions are of concern:<br>1.Under what conditions are unsupervised domain adaptive re-ID tasks DA-learnable?<br>2.How does the theoretical conditions help practical algorithms?</p>
+</blockquote>
+<p>对于问题1，根据论文[1]对分类任务做的3个假设，提出re-ID中的3个假设：</p>
+<ol>
+<li><strong>covariate assumption</strong>: the criteria of classifying feature pairs is the same between two domains;</li>
+<li><strong>Separately Probabilistic Lipschitzness</strong>: the feature pairs can be divided into clusters;</li>
+<li><strong>weight ratio</strong>: concerning the probability of existing a repeated feature among all the features from the two domains.</li>
+</ol>
+<p>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</p>
+<p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.</p>
+<p>根据上述假设, we propose several loss functions on the encoder and samples with guessed label. And the problem of selecting which sample with guessed label to train is optimized by minimizing the proposed loss functions.<br>For the Separately Probabilistic Lipschitzness assumption, we wish to minimize the intra-cluster and maximize inter-cluster distance. Then the sample selecting problem is turned into <strong>data clustering</strong> problem and minimizing loss functions is transformed into finding a <strong>distance metric</strong> for the data.<br>Further, another metric for Weight Ratio is designed.<br>After combining the two metrics together, we end up with a distance evaluating the confidence of the guessed labels.<br>Finally, the DBSCAN clustering method is employed to generate data clusters according to a threshold on the distance. With pseudo-labels on selected data cluster from target domain, the encoder is trained with triplet loss.</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br><img src="/download/3.png"><br>假设2和3最后实现时转变成设计distance metric，用k-reciprocal encoding计算距离，再用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
+<p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ECCV 2020 Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</title>
     <url>/2020/12/05/ECCV-2020-Unsupervised-Domain-Adaptation-with-Noise-Resistible-Mutual-Training-for-Person-Re-identification/</url>
     <content><![CDATA[<blockquote>
@@ -71,136 +103,6 @@
       </tags>
   </entry>
   <entry>
-    <title>PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</title>
-    <url>/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://www.sciencedirect.com/science/article/pii/S003132031930473X">Unsupervised domain adaptive re-identification: Theory and practice</a><br><a href="https://github.com/LcDog/DomainAdaptiveReID">https://github.com/LcDog/DomainAdaptiveReID</a><br>Liangchen Song, Cheng Wang, Lefei Zhang, et al.<br>Wuhan University, Horizon Robotics, Huazhong University of Science and Technology.</p>
-</blockquote>
-<p>将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。</p>
-<a id="more"></a>
-<hr>
-<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><p><img src="/download/1.png"></p>
-<blockquote>
-<p>In the context of re-ID tasks, two questions are of concern:<br>1.Under what conditions are unsupervised domain adaptive re-ID tasks DA-learnable?<br>2.How does the theoretical conditions help practical algorithms?</p>
-</blockquote>
-<p>对于问题1，根据论文[1]对分类任务做的3个假设，提出re-ID中的3个假设：</p>
-<ol>
-<li><strong>covariate assumption</strong>: the criteria of classifying feature pairs is the same between two domains;</li>
-<li><strong>Separately Probabilistic Lipschitzness</strong>: the feature pairs can be divided into clusters;</li>
-<li><strong>weight ratio</strong>: concerning the probability of existing a repeated feature among all the features from the two domains.</li>
-</ol>
-<p>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</p>
-<p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.</p>
-<p>根据上述假设, we propose several loss functions on the encoder and samples with guessed label. And the problem of selecting which sample with guessed label to train is optimized by minimizing the proposed loss functions.<br>For the Separately Probabilistic Lipschitzness assumption, we wish to minimize the intra-cluster and maximize inter-cluster distance. Then the sample selecting problem is turned into <strong>data clustering</strong> problem and minimizing loss functions is transformed into finding a <strong>distance metric</strong> for the data.<br>Further, another metric for Weight Ratio is designed.<br>After combining the two metrics together, we end up with a distance evaluating the confidence of the guessed labels.<br>Finally, the DBSCAN clustering method is employed to generate data clusters according to a threshold on the distance. With pseudo-labels on selected data cluster from target domain, the encoder is trained with triplet loss.</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br><img src="/download/3.png"><br>假设2和3最后实现时转变成设计distance metric，用k-reciprocal encoding计算距离，再用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
-<p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>re-ID 相关</title>
-    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
-<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
-<a id="more"></a>
-<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
-<thead>
-<tr>
-<th align="center">Market-1501</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">12936</td>
-<td align="center">751</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">3368</td>
-<td align="center">750</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">15913/19732</td>
-<td align="center">750+1</td>
-<td align="center">6</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">DukeMTMC-reID</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">16522</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">2228</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">17661</td>
-<td align="center">702+408</td>
-<td align="center">8</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">MSMT17_V1</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">30248</td>
-<td align="center">1041</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">11659</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">82161</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>re-ID</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PyTorch相关</title>
     <url>/2020/11/09/PyTorch%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>记录模块torch.nn.Parameter、torch.nn.Module、torch.autograd.Function，和常见的函数。</p>
@@ -238,6 +140,28 @@
       </categories>
       <tags>
         <tag>PyTorch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
+    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
+</blockquote>
+<p>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。</p>
+<a id="more"></a>
+<hr>
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
+<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
+<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.<br><img src="/download/12.png"></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
       </tags>
   </entry>
   <entry>
@@ -391,6 +315,104 @@
       </categories>
       <tags>
         <tag>tmux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>re-ID 相关</title>
+    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
+<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
+<a id="more"></a>
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
+<thead>
+<tr>
+<th align="center">Market-1501</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">12936</td>
+<td align="center">751</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">3368</td>
+<td align="center">750</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">15913/19732</td>
+<td align="center">750+1</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">DukeMTMC-reID</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">16522</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">2228</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">17661</td>
+<td align="center">702+408</td>
+<td align="center">8</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">MSMT17_V1</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">30248</td>
+<td align="center">1041</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">11659</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">82161</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>re-ID</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
       </tags>
   </entry>
 </search>
