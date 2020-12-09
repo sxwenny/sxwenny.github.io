@@ -15,27 +15,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ICCV 2019 Self-similarity Grouping: A Simple Unsupervised Cross Domain Adaptation Approach for Person Re-identification</title>
-    <url>/2020/12/08/ICCV-2019-Self-similarity-Grouping-A-Simple-Unsupervised-Cross-Domain-Adaptation-Approach-for-Person-Re-identification/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://openaccess.thecvf.com/content_ICCV_2019/html/Fu_Self-Similarity_Grouping_A_Simple_Unsupervised_Cross_Domain_Adaptation_Approach_for_ICCV_2019_paper.html">Self-Similarity Grouping: A Simple Unsupervised Cross Domain Adaptation Approach for Person Re-Identification</a><br><a href="https://github.com/SHI-Labs/Self-Similarity-Grouping">https://github.com/SHI-Labs/Self-Similarity-Grouping</a><br>Yang Fu, Yunchao Wei, Guanshuo Wang, Yuqian Zhou, et al.<br>University of Illinois at Urbana-Champaign, University of Technology Sydney.</p>
-</blockquote>
-<p>关注目标域上特征的相似性。提出了Self-similarity Grouping (SSG)方法，从全局和局部构建多个聚类，进行聚类和训练的迭代过程；在SSG上，基于聚类得到的伪标签提出了半监督的训练策略，实现one-shot domain adaption in an open set setting，将它集成在SSG框架中，进行无监督分支和半监督分支的一起学习，得到SSG++。没有明白具体的训练过程。</p>
-<a id="more"></a>
-<hr>
-<h2 id="Fully-Supervised-Pretraining"><a href="#Fully-Supervised-Pretraining" class="headerlink" title="Fully Supervised Pretraining"></a>Fully Supervised Pretraining</h2><p>ResNet50 GAP后接两层全连接，FC-2048和FC-#ID，FC-#ID后用交叉熵损失，FC-2048后用三元组损失。<br><img src="/download/17.png"></p>
-<h2 id="Unsupervised-Self-similarity-Grouping-SSG"><a href="#Unsupervised-Self-similarity-Grouping-SSG" class="headerlink" title="Unsupervised Self-similarity Grouping (SSG)"></a>Unsupervised Self-similarity Grouping (SSG)</h2><p><img src="/download/13.png"><br><img src="/download/14.png"></p>
-<h2 id="Clustering-guided-Semi-Supervised-Training"><a href="#Clustering-guided-Semi-Supervised-Training" class="headerlink" title="Clustering-guided Semi-Supervised Training"></a>Clustering-guided Semi-Supervised Training</h2><p>we employ the unsupervised clustering algorithm on $f_t$ to generate $N_g$ groups. Then, we randomly sample a single image from each group to form a very small sub-dataset $X_g$ with $N_g$ images. Next, we label this small sub-dataset manually and perform labels assignment based on this annotation.<br>Specifically, we extract features of all images in sub-dataset $X_g$ and obtain three feature vector sets $f_g$ $f_{g-up}$ $f_{g-low}$ and treat each of them as an identity dictionary. Given an unlabeled image $x_t^i$, we find the most similar images from $X_g$ by different cues, whole bodies, upper parts and lower parts, and assign $x_t^i$ with corresponding labels:<br>Note that we employ the k-reciprocal encoding as the distance metric for similarity measurement.<br><img src="/download/16.png"><br><img src="/download/18.png"></p>
-<h2 id="SSG"><a href="#SSG" class="headerlink" title="SSG++"></a>SSG++</h2><p><img src="/download/15.png"><br><img src="/download/19.png"></p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ECCV 2020 Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</title>
     <url>/2020/12/05/ECCV-2020-Unsupervised-Domain-Adaptation-with-Noise-Resistible-Mutual-Training-for-Person-Re-identification/</url>
     <content><![CDATA[<blockquote>
@@ -51,6 +30,27 @@
 <h2 id="Mutual-Instance-Selection"><a href="#Mutual-Instance-Selection" class="headerlink" title="Mutual Instance Selection"></a>Mutual Instance Selection</h2><h3 id="Reliable-Instance-Selection-by-Peer-Confidence"><a href="#Reliable-Instance-Selection-by-Peer-Confidence" class="headerlink" title="Reliable Instance Selection by Peer-Confidence"></a>Reliable Instance Selection by Peer-Confidence</h3><p><img src="/download/5.png"><br><img src="/download/6.png"></p>
 <h3 id="Informative-Instance-Selection-by-Relationship-Disagreement"><a href="#Informative-Instance-Selection-by-Relationship-Disagreement" class="headerlink" title="Informative Instance Selection by Relationship Disagreement"></a>Informative Instance Selection by Relationship Disagreement</h3><p><img src="/download/7.png"><br><img src="/download/8.png"><br>Only the clean and informative triplets are used for the network update.</p>
 <h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p><img src="/download/9.png"></p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ICCV 2019 Self-similarity Grouping: A Simple Unsupervised Cross Domain Adaptation Approach for Person Re-identification</title>
+    <url>/2020/12/08/ICCV-2019-Self-similarity-Grouping-A-Simple-Unsupervised-Cross-Domain-Adaptation-Approach-for-Person-Re-identification/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://openaccess.thecvf.com/content_ICCV_2019/html/Fu_Self-Similarity_Grouping_A_Simple_Unsupervised_Cross_Domain_Adaptation_Approach_for_ICCV_2019_paper.html">Self-Similarity Grouping: A Simple Unsupervised Cross Domain Adaptation Approach for Person Re-Identification</a><br><a href="https://github.com/SHI-Labs/Self-Similarity-Grouping">https://github.com/SHI-Labs/Self-Similarity-Grouping</a><br><a href="https://www.youtube.com/watch?v=xzygVl7ZncQ">youtube 1:28:21</a><br>Yang Fu, Yunchao Wei, Guanshuo Wang, Yuqian Zhou, et al.<br>University of Illinois at Urbana-Champaign, University of Technology Sydney.</p>
+</blockquote>
+<p>关注目标域上特征的相似性。提出了Self-similarity Grouping (SSG)方法，从全局和局部构建多个聚类，进行聚类和训练的迭代过程；在SSG上，基于聚类得到的伪标签提出了半监督的训练策略，实现one-shot domain adaption in an open set setting，将它集成在SSG框架中，进行无监督分支和半监督分支的一起学习，得到SSG++。没有明白具体的训练过程。</p>
+<a id="more"></a>
+<hr>
+<h2 id="Fully-Supervised-Pretraining"><a href="#Fully-Supervised-Pretraining" class="headerlink" title="Fully Supervised Pretraining"></a>Fully Supervised Pretraining</h2><p>ResNet50 GAP后接两层全连接，FC-2048和FC-#ID，FC-#ID后用交叉熵损失，FC-2048后用三元组损失。<br><img src="/download/17.png"></p>
+<h2 id="Unsupervised-Self-similarity-Grouping-SSG"><a href="#Unsupervised-Self-similarity-Grouping-SSG" class="headerlink" title="Unsupervised Self-similarity Grouping (SSG)"></a>Unsupervised Self-similarity Grouping (SSG)</h2><p><img src="/download/13.png"><br><img src="/download/14.png"></p>
+<h2 id="Clustering-guided-Semi-Supervised-Training"><a href="#Clustering-guided-Semi-Supervised-Training" class="headerlink" title="Clustering-guided Semi-Supervised Training"></a>Clustering-guided Semi-Supervised Training</h2><p>we employ the unsupervised clustering algorithm on $f_t$ to generate $N_g$ groups. Then, we randomly sample a single image from each group to form a very small sub-dataset $X_g$ with $N_g$ images. Next, we label this small sub-dataset manually and perform labels assignment based on this annotation.<br>Specifically, we extract features of all images in sub-dataset $X_g$ and obtain three feature vector sets $f_g$ $f_{g-up}$ $f_{g-low}$ and treat each of them as an identity dictionary. Given an unlabeled image $x_t^i$, we find the most similar images from $X_g$ by different cues, whole bodies, upper parts and lower parts, and assign $x_t^i$ with corresponding labels:<br>Note that we employ the k-reciprocal encoding as the distance metric for similarity measurement.<br><img src="/download/16.png"><br><img src="/download/18.png"></p>
+<h2 id="SSG"><a href="#SSG" class="headerlink" title="SSG++"></a>SSG++</h2><p><img src="/download/15.png"><br><img src="/download/19.png"></p>
 ]]></content>
       <categories>
         <category>paper</category>
@@ -124,29 +124,6 @@
       </tags>
   </entry>
   <entry>
-    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
-    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
-</blockquote>
-<p>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。</p>
-<a id="more"></a>
-<hr>
-<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
-<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
-<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
-<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
-</blockquote>
-<p><img src="/download/12.png"></p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PyTorch相关</title>
     <url>/2020/11/09/PyTorch%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>记录模块torch.nn.Parameter、torch.nn.Module、torch.autograd.Function，和常见的函数。</p>
@@ -184,6 +161,127 @@
       </categories>
       <tags>
         <tag>PyTorch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
+    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
+</blockquote>
+<p>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。</p>
+<a id="more"></a>
+<hr>
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
+<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
+<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
+</blockquote>
+<p><img src="/download/12.png"></p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>re-ID 相关</title>
+    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
+<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
+<a id="more"></a>
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
+<thead>
+<tr>
+<th align="center">Market-1501</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">12936</td>
+<td align="center">751</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">3368</td>
+<td align="center">750</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">15913/19732</td>
+<td align="center">750+1</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">DukeMTMC-reID</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">16522</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">2228</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">17661</td>
+<td align="center">702+408</td>
+<td align="center">8</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">MSMT17_V1</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">30248</td>
+<td align="center">1041</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">11659</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">82161</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>re-ID</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
       </tags>
   </entry>
   <entry>
@@ -337,104 +435,6 @@
       </categories>
       <tags>
         <tag>tmux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>re-ID 相关</title>
-    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
-<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
-<a id="more"></a>
-<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
-<thead>
-<tr>
-<th align="center">Market-1501</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">12936</td>
-<td align="center">751</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">3368</td>
-<td align="center">750</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">15913/19732</td>
-<td align="center">750+1</td>
-<td align="center">6</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">DukeMTMC-reID</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">16522</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">2228</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">17661</td>
-<td align="center">702+408</td>
-<td align="center">8</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">MSMT17_V1</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">30248</td>
-<td align="center">1041</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">11659</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">82161</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>re-ID</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
       </tags>
   </entry>
 </search>
