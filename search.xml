@@ -15,35 +15,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux 相关</title>
-    <url>/2020/11/20/Linux%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>记录Linux相关的命令。</p>
+    <title>ICCV 2019 Self-similarity Grouping: A Simple Unsupervised Cross Domain Adaptation Approach for Person Re-identification</title>
+    <url>/2020/12/08/ICCV-2019-Self-similarity-Grouping-A-Simple-Unsupervised-Cross-Domain-Adaptation-Approach-for-Person-Re-identification/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://openaccess.thecvf.com/content_ICCV_2019/html/Fu_Self-Similarity_Grouping_A_Simple_Unsupervised_Cross_Domain_Adaptation_Approach_for_ICCV_2019_paper.html">Self-Similarity Grouping: A Simple Unsupervised Cross Domain Adaptation Approach for Person Re-Identification</a><br><a href="https://github.com/SHI-Labs/Self-Similarity-Grouping">https://github.com/SHI-Labs/Self-Similarity-Grouping</a><br>Yang Fu, Yunchao Wei, Guanshuo Wang, Yuqian Zhou, et al.<br>University of Illinois at Urbana-Champaign, University of Technology Sydney.</p>
+</blockquote>
+<p>关注目标域上特征的相似性。提出了Self-similarity Grouping (SSG)方法，从全局和局部构建多个聚类，进行聚类和训练的迭代过程；在SSG上，基于聚类得到的伪标签提出了半监督的训练策略，实现one-shot domain adaption in an open set setting，将它集成在SSG框架中，进行无监督分支和半监督分支的一起学习，得到SSG++。</p>
 <a id="more"></a>
-<p>………………………………………………………………………………………………………………………………………………………………..<br><a href="http://cyyan.cn/2019/05/11/%E5%AE%89%E8%A3%85ubuntu16.04%20%E7%B3%BB%E7%BB%9F%E5%8F%8A1080ti%E9%85%8D%E7%BD%AEcuda%E7%9A%84%E8%AE%B0%E5%BD%95/">安装ubuntu16.04 系统及1080ti配置cuda的记录</a><br>打开bashrc文件<code>$ vim ~/.bashrc</code>将以下两行环境变量添加至文档最后，保存退出后执行bashrc文件<code>$ source ~/.bashrc</code>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda&#x2F;bin$&#123;PATH:+:$&#123;PATH&#125;&#125;</span><br><span class="line">export LD_LIBRARY_PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64$&#123;LD_LIBRARY_PATH:+:$&#123;LD_LIBRARY_PATH&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>检查驱动版本<code>$ cat /proc/driver/nvidia/version</code>，检查cuda版本<code>$ nvcc -V</code>，<code>cat /usr/local/cuda/version.txt</code>，查看显卡信息<code>$ nvidia-smi</code>。</p>
-<p>………………………………………………………………………………………………………………………………………………………………..<br><a href="https://blog.csdn.net/lillian_cl/article/details/78179950">Linux 无进程显存占用问题</a><br><code>fuser -v /dev/nvidia*</code> 显示top不会显示的进程。</p>
-<p>………………………………………………………………………………………………………………………………………………………………..<br><code>gpustat</code> 查看GPU。</p>
-<p>………………………………………………………………………………………………………………………………………………………………..<br><code>df -h</code> 查看硬盘剩余空间。<br><code>du -h --max-depth=1</code> 查看当前目录所占空间。</p>
+<hr>
+<h2 id="Fully-Supervised-Pretraining"><a href="#Fully-Supervised-Pretraining" class="headerlink" title="Fully Supervised Pretraining"></a>Fully Supervised Pretraining</h2><p>ResNet50 GAP后接两层全连接，FC-2048和FC-#ID，FC-#ID后用交叉熵损失，FC-2048后用三元组损失。<br><img src="/download/17.png"></p>
+<h2 id="Unsupervised-Self-similarity-Grouping-SSG"><a href="#Unsupervised-Self-similarity-Grouping-SSG" class="headerlink" title="Unsupervised Self-similarity Grouping (SSG)"></a>Unsupervised Self-similarity Grouping (SSG)</h2><p><img src="/download/13.png"><br><img src="/download/14.png"></p>
+<h2 id="Clustering-guided-Semi-Supervised-Training"><a href="#Clustering-guided-Semi-Supervised-Training" class="headerlink" title="Clustering-guided Semi-Supervised Training"></a>Clustering-guided Semi-Supervised Training</h2><p>we employ the unsupervised clustering algorithm on $f_t$ to generate $N_g$ groups. Then, we randomly sample a single image from each group to form a very small sub-dataset $X_g$ with $N_g$ images. Next, we label this small sub-dataset manually and perform labels assignment based on this annotation.<br>Specifically, we extract features of all images in sub-dataset $X_g$ and obtain three feature vector sets $f_g$ $f_{g_up}$ $f_{g_low}$ and treat each of them as an identity dictionary. Given an unlabeled image $x_t^i$, we find the most similar images from $X_g$ by different cues, whole bodies, upper parts and lower parts, and assign $x_t^i$ with corresponding labels:<br><img src="/download/16.png"><br>Note that we employ the k-reciprocal encoding as the distance metric for similarity measurement.<br><img src="/download/18.png"></p>
+<h2 id="SSG"><a href="#SSG" class="headerlink" title="SSG++"></a>SSG++</h2><p><img src="/download/15.png"><br><img src="/download/19.png"></p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>paper</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git 相关</title>
-    <url>/2020/11/05/Git%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>Git撤销push：<a href="https://www.cnblogs.com/chaoxiZ/p/9714085.html">Git撤销对远程仓库的push&amp;commit提交</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git log</span><br><span class="line">git reset --hard &lt;版本号&gt;</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
-<a id="more"></a>]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
+        <tag>re-ID</tag>
       </tags>
   </entry>
   <entry>
@@ -68,6 +57,38 @@
       </categories>
       <tags>
         <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 相关</title>
+    <url>/2020/11/05/Git%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>Git撤销push：<a href="https://www.cnblogs.com/chaoxiZ/p/9714085.html">Git撤销对远程仓库的push&amp;commit提交</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git log</span><br><span class="line">git reset --hard &lt;版本号&gt;</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
+<a id="more"></a>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 相关</title>
+    <url>/2020/11/20/Linux%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>记录Linux相关的命令。</p>
+<a id="more"></a>
+<p>………………………………………………………………………………………………………………………………………………………………..<br><a href="http://cyyan.cn/2019/05/11/%E5%AE%89%E8%A3%85ubuntu16.04%20%E7%B3%BB%E7%BB%9F%E5%8F%8A1080ti%E9%85%8D%E7%BD%AEcuda%E7%9A%84%E8%AE%B0%E5%BD%95/">安装ubuntu16.04 系统及1080ti配置cuda的记录</a><br>打开bashrc文件<code>$ vim ~/.bashrc</code>将以下两行环境变量添加至文档最后，保存退出后执行bashrc文件<code>$ source ~/.bashrc</code>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda&#x2F;bin$&#123;PATH:+:$&#123;PATH&#125;&#125;</span><br><span class="line">export LD_LIBRARY_PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64$&#123;LD_LIBRARY_PATH:+:$&#123;LD_LIBRARY_PATH&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>检查驱动版本<code>$ cat /proc/driver/nvidia/version</code>，检查cuda版本<code>$ nvcc -V</code>，<code>cat /usr/local/cuda/version.txt</code>，查看显卡信息<code>$ nvidia-smi</code>。</p>
+<p>………………………………………………………………………………………………………………………………………………………………..<br><a href="https://blog.csdn.net/lillian_cl/article/details/78179950">Linux 无进程显存占用问题</a><br><code>fuser -v /dev/nvidia*</code> 显示top不会显示的进程。</p>
+<p>………………………………………………………………………………………………………………………………………………………………..<br><code>gpustat</code> 查看GPU。</p>
+<p>………………………………………………………………………………………………………………………………………………………………..<br><code>df -h</code> 查看硬盘剩余空间。<br><code>du -h --max-depth=1</code> 查看当前目录所占空间。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -103,23 +124,138 @@
       </tags>
   </entry>
   <entry>
-    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
-    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
-</blockquote>
-<p>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。</p>
+    <title>PyTorch相关</title>
+    <url>/2020/11/09/PyTorch%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>记录模块torch.nn.Parameter、torch.nn.Module、torch.autograd.Function，和常见的函数。</p>
 <a id="more"></a>
-<hr>
-<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
-<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
-<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
-<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
-</blockquote>
-<p><img src="/download/12.png"></p>
+<h2 id="torch-nn-Parameter和torch-nn-Module"><a href="#torch-nn-Parameter和torch-nn-Module" class="headerlink" title="torch.nn.Parameter和torch.nn.Module"></a>torch.nn.Parameter和torch.nn.Module</h2><h3 id="Parameter和Module的官方说明"><a href="#Parameter和Module的官方说明" class="headerlink" title="Parameter和Module的官方说明"></a>Parameter和Module的官方说明</h3><p><strong>torch.nn.Parameter:</strong><br>Arguments: data=None, requires_grad=True.</p>
+<p><strong>torch.nn.Module:</strong><br><code>double()</code> <code>float()</code> <code>half()</code> Casts all floating point parameters and buffers to double/float/half datatype.<br><code>type(dst_type)</code> Casts all parameters and buffers to dst_type.</p>
+<p><code>cpu()</code> <code>cuda(device=None)</code> Moves all model parameters and buffers to the CPU/GPU.</p>
+<p><code>eval()</code> <code>train(mode=True)</code> Sets the module in evaluation/training mode.</p>
+<p><code>add_module(name, module)</code> Adds a child module to the current module. The module can be accessed as an attribute using the given name.</p>
+<p><code>apply(fn)</code> Applies fn recursively to every submodule (as returned by .children()) as well as self.</p>
+<p><code>extra_repr()</code> Set the extra representation of the module. To print customized extra information, you should reimplement this method in your own modules. Both single-line and multi-line strings are acceptable.</p>
+<p><code>forward(*input)</code> Defines the computation performed at every call.</p>
+<p><code>register_backward_hook(hook)</code> Registers a backward hook on the module. The hook will be called every time the gradients with respect to module inputs are computed.<br><code>register_forward_hook(hook)</code> Registers a forward hook on the module. The hook will be called every time after <code>forward()</code> has computed an output.<br><code>register_forward_pre_hook(hook)</code> Registers a forward pre-hook on the module. The hook will be called every time before <code>forward()</code> is invoked.</p>
+<p><code>requires_grad_(requires_grad=True)</code> Change if autograd should record operations on parameters in this module. This method sets the parameters’ requires_grad attributes in-place.</p>
+<p><code>to(*args, **kwargs)</code> Moves and/or casts the parameters and buffers.</p>
+<p><code>zero_grad()</code> Sets gradients of all model parameters to zero.</p>
+<p><code>buffers(recurse=True)</code> Returns an <strong>iterator</strong> over module buffers.<br><code>parameters(recurse=True)</code> Returns an <strong>iterator</strong> over module parameters.<br><code>named_buffers(prefix=&#39;&#39;, recurse=True)</code> Returns an <strong>iterator</strong> over module buffers, yielding both the name of the buffer as well as the buffer itself.<br><code>named_parameters(prefix=&#39;&#39;, recurse=True)</code> Returns an <strong>iterator</strong> over module parameters, yielding both the name of the parameter as well as the parameter itself.<br><code>register_buffer(name, tensor)</code> Adds a persistent buffer to the module. This is typically used to register a buffer that should not to be considered a model parameter. Buffers can be accessed as attributes using given names.<br><code>register_parameter(name, param)</code> Adds a parameter to the module. The parameter can be accessed as an attribute using given name.<br><code>load_state_dict(state_dict, strict=True)</code> Copies parameters and buffers from state_dict into this module and its descendants. If strict is True, then the keys of state_dict must exactly match the keys returned by this module’s state_dict() function.<br><code>state_dict(destination=None, prefix=&#39;&#39;, keep_vars=False)</code> Returns a <strong>dictionary</strong> containing a whole state of the module. Both parameters and persistent buffers (e.g. running averages) are included. Keys are corresponding parameter and buffer names.</p>
+<p><code>children()</code> Returns an <strong>iterator</strong> over immediate children modules.<br><code>modules()</code> Returns an <strong>iterator</strong> over all modules in the network. Duplicate modules are returned only once.<br><code>named_children()</code> Returns an <strong>iterator</strong> over immediate children modules, yielding both the name of the module as well as the module itself.<br><code>named_modules(memo=None, prefix=&#39;&#39;)</code> Returns an <strong>iterator</strong> over all modules in the network, yielding both the name of the module as well as the module itself. Duplicate modules are returned only once.</p>
+<h3 id="Module中的parameters和buffers和state-dict"><a href="#Module中的parameters和buffers和state-dict" class="headerlink" title="Module中的parameters和buffers和state_dict"></a>Module中的parameters和buffers和state_dict</h3><p><a href="https://zhuanlan.zhihu.com/p/89442276">Pytorch模型中的parameter与buffer</a><br><em>parameter</em> 反向传播需要被optimizer更新, 通过<code>model.parameters()</code>返回；<em>buffer</em> 反向传播不需要被optimizer更新，通过<code>model.buffers()</code>返回。<br>创建parameter：<br>(1) 直接将模型的成员变量(self.xxx)通过<code>nn.Parameter()</code>创建，会自动注册到parameters中，并且这样创建的参数会自动保存到state_dict中；<br>(2) 通过<code>nn.Parameter()</code>创建普通Parameter对象，不作为模型的成员变量，然后将Parameter对象通过<code>register_parameter()</code>进行注册，注册后的参数也会自动保存到state_dict中。<br>创建buffer：<br>需要创建tensor，然后将tensor通过<code>register_buffer()</code>进行注册，注册完后参数也会自动保存到state_dict中去。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyModel</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        super(MyModel, self).__init__()</span><br><span class="line">        buffer = torch.randn(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">        self.register_buffer(<span class="string">&#x27;my_buffer&#x27;</span>, buffer)</span><br><span class="line">        self.param1 = nn.Parameter(torch.randn(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">        param = nn.Parameter(torch.randn(<span class="number">2</span>, <span class="number">1</span>))</span><br><span class="line">        self.register_parameter(<span class="string">&quot;param2&quot;</span>, param)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, x</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    model = MyModel()</span><br><span class="line">    <span class="keyword">for</span> param <span class="keyword">in</span> model.parameters():</span><br><span class="line">        print(param)  <span class="comment"># &lt;class &#x27;torch.nn.parameter.Parameter&#x27;&gt;</span></span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_parameters():</span><br><span class="line">        print(tup)  <span class="comment"># &lt;class &#x27;tuple&#x27;&gt;</span></span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> buffer <span class="keyword">in</span> model.buffers():</span><br><span class="line">        print(buffer)  <span class="comment"># &lt;class &#x27;torch.Tensor&#x27;&gt;</span></span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_buffers():</span><br><span class="line">        print(tup)  <span class="comment"># &lt;class &#x27;tuple&#x27;&gt;</span></span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    print(model.state_dict())  <span class="comment"># &lt;class &#x27;collections.OrderedDict&#x27;&gt;</span></span><br><span class="line"><span class="comment">##</span></span><br><span class="line">Parameter containing:</span><br><span class="line">tensor([[<span class="number">-0.9896</span>, <span class="number">-1.9619</span>]], requires_grad=<span class="literal">True</span>)</span><br><span class="line">Parameter containing:</span><br><span class="line">tensor([[<span class="number">-1.6176</span>],</span><br><span class="line">        [<span class="number">-0.1562</span>]], requires_grad=<span class="literal">True</span>)</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;param1&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">-0.9896</span>, <span class="number">-1.9619</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;param2&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">-1.6176</span>],</span><br><span class="line">        [<span class="number">-0.1562</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">----------------</span><br><span class="line">tensor([[<span class="number">-1.3587</span>, <span class="number">-0.4721</span>, <span class="number">-0.7553</span>],</span><br><span class="line">        [ <span class="number">0.5493</span>,  <span class="number">0.8100</span>,  <span class="number">1.4646</span>]])</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;my_buffer&#x27;</span>, tensor([[<span class="number">-1.3587</span>, <span class="number">-0.4721</span>, <span class="number">-0.7553</span>],</span><br><span class="line">        [ <span class="number">0.5493</span>,  <span class="number">0.8100</span>,  <span class="number">1.4646</span>]]))</span><br><span class="line">----------------</span><br><span class="line">OrderedDict([(<span class="string">&#x27;param1&#x27;</span>, tensor([[<span class="number">-0.9896</span>, <span class="number">-1.9619</span>]])), (<span class="string">&#x27;param2&#x27;</span>, tensor([[<span class="number">-1.6176</span>],</span><br><span class="line">        [<span class="number">-0.1562</span>]])), (<span class="string">&#x27;my_buffer&#x27;</span>, tensor([[<span class="number">-1.3587</span>, <span class="number">-0.4721</span>, <span class="number">-0.7553</span>],</span><br><span class="line">        [ <span class="number">0.5493</span>,  <span class="number">0.8100</span>,  <span class="number">1.4646</span>]]))])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 模型保存和加载</span></span><br><span class="line">torch.save(model.state_dict(), PATH)</span><br><span class="line">model.load_state_dict(torch.load(PATH)</span><br></pre></td></tr></table></figure>
+<h3 id="Module中的children和modules"><a href="#Module中的children和modules" class="headerlink" title="Module中的children和modules"></a>Module中的children和modules</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyModel</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        super(MyModel, self).__init__()</span><br><span class="line">        self.lin1 = nn.Linear(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.lin2 = nn.Sequential(nn.Linear(<span class="number">1</span>, <span class="number">2</span>), nn.Linear(<span class="number">2</span>, <span class="number">1</span>))</span><br><span class="line">        lin = nn.Linear(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">        self.lin3 = nn.Sequential(lin, lin)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, x</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    model = MyModel()</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_children():</span><br><span class="line">        print(tup)</span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_modules():</span><br><span class="line">        print(tup)</span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_parameters():</span><br><span class="line">        print(tup)</span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    print(model.state_dict())</span><br><span class="line"><span class="comment">##</span></span><br><span class="line">(<span class="string">&#x27;lin1&#x27;</span>, Linear(in_features=<span class="number">1</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin3&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;&#x27;</span>, MyModel(</span><br><span class="line">  (lin1): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (lin2): Sequential(</span><br><span class="line">    (<span class="number">0</span>): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">    (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  )</span><br><span class="line">  (lin3): Sequential(</span><br><span class="line">    (<span class="number">0</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">    (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  )</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin1&#x27;</span>, Linear(in_features=<span class="number">1</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin2.0&#x27;</span>, Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.1&#x27;</span>, Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin3&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin3.0&#x27;</span>, Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>))</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;lin1.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">0.2448</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin1.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([<span class="number">-0.7488</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.0.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">0.4151</span>],</span><br><span class="line">        [<span class="number">0.9873</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.0.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([<span class="number">-0.0301</span>,  <span class="number">0.3848</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.1.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[ <span class="number">0.4902</span>, <span class="number">-0.4937</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.1.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([<span class="number">0.2317</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin3.0.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">-0.6023</span>, <span class="number">-0.2234</span>],</span><br><span class="line">        [ <span class="number">0.4948</span>,  <span class="number">0.4749</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin3.0.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([ <span class="number">0.2648</span>, <span class="number">-0.4021</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">----------------</span><br><span class="line">OrderedDict([(<span class="string">&#x27;lin1.weight&#x27;</span>, tensor([[<span class="number">0.2448</span>]])), (<span class="string">&#x27;lin1.bias&#x27;</span>, tensor([<span class="number">-0.7488</span>])), (<span class="string">&#x27;lin2.0.weight&#x27;</span>, tensor([[<span class="number">0.4151</span>],</span><br><span class="line">        [<span class="number">0.9873</span>]])), (<span class="string">&#x27;lin2.0.bias&#x27;</span>, tensor([<span class="number">-0.0301</span>,  <span class="number">0.3848</span>])), (<span class="string">&#x27;lin2.1.weight&#x27;</span>, tensor([[ <span class="number">0.4902</span>, <span class="number">-0.4937</span>]])), (<span class="string">&#x27;lin2.1.bias&#x27;</span>, tensor([<span class="number">0.2317</span>])), (<span class="string">&#x27;lin3.0.weight&#x27;</span>, tensor([[<span class="number">-0.6023</span>, <span class="number">-0.2234</span>],</span><br><span class="line">        [ <span class="number">0.4948</span>,  <span class="number">0.4749</span>]])), (<span class="string">&#x27;lin3.0.bias&#x27;</span>, tensor([ <span class="number">0.2648</span>, <span class="number">-0.4021</span>])), (<span class="string">&#x27;lin3.1.weight&#x27;</span>, tensor([[<span class="number">-0.6023</span>, <span class="number">-0.2234</span>],</span><br><span class="line">        [ <span class="number">0.4948</span>,  <span class="number">0.4749</span>]])), (<span class="string">&#x27;lin3.1.bias&#x27;</span>, tensor([ <span class="number">0.2648</span>, <span class="number">-0.4021</span>]))])</span><br></pre></td></tr></table></figure>
+<h2 id="torch-autograd-Function"><a href="#torch-autograd-Function" class="headerlink" title="torch.autograd.Function"></a>torch.autograd.Function</h2><p><a href="https://pytorch.org/docs/1.3.1/notes/extending.html">EXTENDING PYTORCH</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 示例</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Exp</span>(<span class="params">Function</span>):</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">ctx, i</span>):</span></span><br><span class="line">        result = i.exp()</span><br><span class="line">        ctx.save_for_backward(result)</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backward</span>(<span class="params">ctx, grad_output</span>):</span></span><br><span class="line">        result, = ctx.saved_tensors</span><br><span class="line">        <span class="keyword">return</span> grad_output * result</span><br><span class="line"><span class="comment"># To make it easier to use these custom ops, we recommend aliasing their apply method.</span></span><br><span class="line">exp = Exp.apply</span><br></pre></td></tr></table></figure>
+<p><code>STATIC backward(ctx, *grad_outputs)</code> It must accept a context ctx as the first argument, followed by as many outputs did <code>forward()</code> return, and it should return as many tensors, as there were inputs to <code>forward()</code>. Each argument is the gradient w.r.t the given output, and each returned value should be the gradient w.r.t. the corresponding input.<br>The context can be used to retrieve tensors saved during the forward pass. It also has an attribute <code>ctx.needs_input_grad</code> as a tuple of booleans representing whether each input needs gradient. E.g., <code>backward()</code> will have <code>ctx.needs_input_grad[0] = True</code> if the first input to <code>forward()</code> needs gradient computated w.r.t. the output.</p>
+<p><code>STATIC forward(ctx, *args, **kwargs)</code> It must accept a context ctx as the first argument, followed by any number of arguments (tensors or other types). The context can be used to store tensors that can be then retrieved during the backward pass.</p>
+<h2 id="torch-Tensor"><a href="#torch-Tensor" class="headerlink" title="torch.Tensor"></a>torch.Tensor</h2><p>torch.Tensor: class, is an alias for the default tensor type (torch.FloatTensor). A tensor can be constructed from a Python list or sequence using the torch.tensor() constructor:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">torch.tensor([[<span class="number">1.</span>, <span class="number">-1.</span>], [<span class="number">1.</span>, <span class="number">-1.</span>]])</span><br><span class="line">torch.tensor(np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]]))</span><br></pre></td></tr></table></figure>
+<h3 id="item"><a href="#item" class="headerlink" title="item()"></a>item()</h3><p><code>x.item()</code> Returns the value of this tensor as a standard Python number. This only works for tensors with one element. This operation is not differentiable.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = torch.tensor([[<span class="number">1</span>]])</span><br><span class="line">x  <span class="comment"># tensor([[1]])</span></span><br><span class="line">x.item()  <span class="comment"># 1</span></span><br></pre></td></tr></table></figure>
+<h3 id="clone-和detach"><a href="#clone-和detach" class="headerlink" title="clone()和detach()"></a>clone()和detach()</h3><p><code>x.clone()</code> Returns a copy of the self tensor. The copy has the same size and data type as self. Unlike <code>copy_()</code>, this function is <strong>recorded in the computation graph</strong>. Gradients propagating to the cloned tensor will propagate to the original tensor. 开辟新的内存。<br><code>x.detach()</code> Returns a new Tensor, detached from the current graph. The result will <strong>never require gradient</strong>. Returned Tensor <strong>shares the same storage</strong> with the original one.<br><a href="https://blog.csdn.net/guofei_fly/article/details/104486708">【Pytorch】对比clone、detach以及copy_等张量复制操作</a></p>
+<h3 id="contiguous"><a href="#contiguous" class="headerlink" title="contiguous()"></a>contiguous()</h3><p>Returns a contiguous tensor containing the same data as self tensor. If self tensor is contiguous, this function returns the self tensor.<br><a href="https://zhuanlan.zhihu.com/p/64551412">PyTorch中的contiguous</a></p>
 ]]></content>
       <categories>
-        <category>paper</category>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>PyTorch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>re-ID 相关</title>
+    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
+<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
+<a id="more"></a>
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
+<thead>
+<tr>
+<th align="center">Market-1501</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">12936</td>
+<td align="center">751</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">3368</td>
+<td align="center">750</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">15913/19732</td>
+<td align="center">750+1</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">DukeMTMC-reID</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">16522</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">2228</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">17661</td>
+<td align="center">702+408</td>
+<td align="center">8</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">MSMT17_V1</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">30248</td>
+<td align="center">1041</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">11659</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">82161</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>re-ID</category>
       </categories>
       <tags>
         <tag>re-ID</tag>
@@ -279,141 +415,26 @@
       </tags>
   </entry>
   <entry>
-    <title>re-ID 相关</title>
-    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
-<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
+    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
+    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
+</blockquote>
+<p>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。</p>
 <a id="more"></a>
-<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
-<thead>
-<tr>
-<th align="center">Market-1501</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">12936</td>
-<td align="center">751</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">3368</td>
-<td align="center">750</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">15913/19732</td>
-<td align="center">750+1</td>
-<td align="center">6</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">DukeMTMC-reID</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">16522</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">2228</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">17661</td>
-<td align="center">702+408</td>
-<td align="center">8</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">MSMT17_V1</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">30248</td>
-<td align="center">1041</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">11659</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">82161</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-</tbody></table>
+<hr>
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
+<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
+<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
+</blockquote>
+<p><img src="/download/12.png"></p>
 ]]></content>
       <categories>
-        <category>re-ID</category>
+        <category>paper</category>
       </categories>
       <tags>
         <tag>re-ID</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PyTorch相关</title>
-    <url>/2020/11/09/PyTorch%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>记录模块torch.nn.Parameter、torch.nn.Module、torch.autograd.Function，和常见的函数。</p>
-<a id="more"></a>
-<h2 id="torch-nn-Parameter和torch-nn-Module"><a href="#torch-nn-Parameter和torch-nn-Module" class="headerlink" title="torch.nn.Parameter和torch.nn.Module"></a>torch.nn.Parameter和torch.nn.Module</h2><h3 id="Parameter和Module的官方说明"><a href="#Parameter和Module的官方说明" class="headerlink" title="Parameter和Module的官方说明"></a>Parameter和Module的官方说明</h3><p><strong>torch.nn.Parameter:</strong><br>Arguments: data=None, requires_grad=True.</p>
-<p><strong>torch.nn.Module:</strong><br><code>double()</code> <code>float()</code> <code>half()</code> Casts all floating point parameters and buffers to double/float/half datatype.<br><code>type(dst_type)</code> Casts all parameters and buffers to dst_type.</p>
-<p><code>cpu()</code> <code>cuda(device=None)</code> Moves all model parameters and buffers to the CPU/GPU.</p>
-<p><code>eval()</code> <code>train(mode=True)</code> Sets the module in evaluation/training mode.</p>
-<p><code>add_module(name, module)</code> Adds a child module to the current module. The module can be accessed as an attribute using the given name.</p>
-<p><code>apply(fn)</code> Applies fn recursively to every submodule (as returned by .children()) as well as self.</p>
-<p><code>extra_repr()</code> Set the extra representation of the module. To print customized extra information, you should reimplement this method in your own modules. Both single-line and multi-line strings are acceptable.</p>
-<p><code>forward(*input)</code> Defines the computation performed at every call.</p>
-<p><code>register_backward_hook(hook)</code> Registers a backward hook on the module. The hook will be called every time the gradients with respect to module inputs are computed.<br><code>register_forward_hook(hook)</code> Registers a forward hook on the module. The hook will be called every time after <code>forward()</code> has computed an output.<br><code>register_forward_pre_hook(hook)</code> Registers a forward pre-hook on the module. The hook will be called every time before <code>forward()</code> is invoked.</p>
-<p><code>requires_grad_(requires_grad=True)</code> Change if autograd should record operations on parameters in this module. This method sets the parameters’ requires_grad attributes in-place.</p>
-<p><code>to(*args, **kwargs)</code> Moves and/or casts the parameters and buffers.</p>
-<p><code>zero_grad()</code> Sets gradients of all model parameters to zero.</p>
-<p><code>buffers(recurse=True)</code> Returns an <strong>iterator</strong> over module buffers.<br><code>parameters(recurse=True)</code> Returns an <strong>iterator</strong> over module parameters.<br><code>named_buffers(prefix=&#39;&#39;, recurse=True)</code> Returns an <strong>iterator</strong> over module buffers, yielding both the name of the buffer as well as the buffer itself.<br><code>named_parameters(prefix=&#39;&#39;, recurse=True)</code> Returns an <strong>iterator</strong> over module parameters, yielding both the name of the parameter as well as the parameter itself.<br><code>register_buffer(name, tensor)</code> Adds a persistent buffer to the module. This is typically used to register a buffer that should not to be considered a model parameter. Buffers can be accessed as attributes using given names.<br><code>register_parameter(name, param)</code> Adds a parameter to the module. The parameter can be accessed as an attribute using given name.<br><code>load_state_dict(state_dict, strict=True)</code> Copies parameters and buffers from state_dict into this module and its descendants. If strict is True, then the keys of state_dict must exactly match the keys returned by this module’s state_dict() function.<br><code>state_dict(destination=None, prefix=&#39;&#39;, keep_vars=False)</code> Returns a <strong>dictionary</strong> containing a whole state of the module. Both parameters and persistent buffers (e.g. running averages) are included. Keys are corresponding parameter and buffer names.</p>
-<p><code>children()</code> Returns an <strong>iterator</strong> over immediate children modules.<br><code>modules()</code> Returns an <strong>iterator</strong> over all modules in the network. Duplicate modules are returned only once.<br><code>named_children()</code> Returns an <strong>iterator</strong> over immediate children modules, yielding both the name of the module as well as the module itself.<br><code>named_modules(memo=None, prefix=&#39;&#39;)</code> Returns an <strong>iterator</strong> over all modules in the network, yielding both the name of the module as well as the module itself. Duplicate modules are returned only once.</p>
-<h3 id="Module中的parameters和buffers和state-dict"><a href="#Module中的parameters和buffers和state-dict" class="headerlink" title="Module中的parameters和buffers和state_dict"></a>Module中的parameters和buffers和state_dict</h3><p><a href="https://zhuanlan.zhihu.com/p/89442276">Pytorch模型中的parameter与buffer</a><br><em>parameter</em> 反向传播需要被optimizer更新, 通过<code>model.parameters()</code>返回；<em>buffer</em> 反向传播不需要被optimizer更新，通过<code>model.buffers()</code>返回。<br>创建parameter：<br>(1) 直接将模型的成员变量(self.xxx)通过<code>nn.Parameter()</code>创建，会自动注册到parameters中，并且这样创建的参数会自动保存到state_dict中；<br>(2) 通过<code>nn.Parameter()</code>创建普通Parameter对象，不作为模型的成员变量，然后将Parameter对象通过<code>register_parameter()</code>进行注册，注册后的参数也会自动保存到state_dict中。<br>创建buffer：<br>需要创建tensor，然后将tensor通过<code>register_buffer()</code>进行注册，注册完后参数也会自动保存到state_dict中去。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyModel</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        super(MyModel, self).__init__()</span><br><span class="line">        buffer = torch.randn(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">        self.register_buffer(<span class="string">&#x27;my_buffer&#x27;</span>, buffer)</span><br><span class="line">        self.param1 = nn.Parameter(torch.randn(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">        param = nn.Parameter(torch.randn(<span class="number">2</span>, <span class="number">1</span>))</span><br><span class="line">        self.register_parameter(<span class="string">&quot;param2&quot;</span>, param)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, x</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    model = MyModel()</span><br><span class="line">    <span class="keyword">for</span> param <span class="keyword">in</span> model.parameters():</span><br><span class="line">        print(param)  <span class="comment"># &lt;class &#x27;torch.nn.parameter.Parameter&#x27;&gt;</span></span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_parameters():</span><br><span class="line">        print(tup)  <span class="comment"># &lt;class &#x27;tuple&#x27;&gt;</span></span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> buffer <span class="keyword">in</span> model.buffers():</span><br><span class="line">        print(buffer)  <span class="comment"># &lt;class &#x27;torch.Tensor&#x27;&gt;</span></span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_buffers():</span><br><span class="line">        print(tup)  <span class="comment"># &lt;class &#x27;tuple&#x27;&gt;</span></span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    print(model.state_dict())  <span class="comment"># &lt;class &#x27;collections.OrderedDict&#x27;&gt;</span></span><br><span class="line"><span class="comment">##</span></span><br><span class="line">Parameter containing:</span><br><span class="line">tensor([[<span class="number">-0.9896</span>, <span class="number">-1.9619</span>]], requires_grad=<span class="literal">True</span>)</span><br><span class="line">Parameter containing:</span><br><span class="line">tensor([[<span class="number">-1.6176</span>],</span><br><span class="line">        [<span class="number">-0.1562</span>]], requires_grad=<span class="literal">True</span>)</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;param1&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">-0.9896</span>, <span class="number">-1.9619</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;param2&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">-1.6176</span>],</span><br><span class="line">        [<span class="number">-0.1562</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">----------------</span><br><span class="line">tensor([[<span class="number">-1.3587</span>, <span class="number">-0.4721</span>, <span class="number">-0.7553</span>],</span><br><span class="line">        [ <span class="number">0.5493</span>,  <span class="number">0.8100</span>,  <span class="number">1.4646</span>]])</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;my_buffer&#x27;</span>, tensor([[<span class="number">-1.3587</span>, <span class="number">-0.4721</span>, <span class="number">-0.7553</span>],</span><br><span class="line">        [ <span class="number">0.5493</span>,  <span class="number">0.8100</span>,  <span class="number">1.4646</span>]]))</span><br><span class="line">----------------</span><br><span class="line">OrderedDict([(<span class="string">&#x27;param1&#x27;</span>, tensor([[<span class="number">-0.9896</span>, <span class="number">-1.9619</span>]])), (<span class="string">&#x27;param2&#x27;</span>, tensor([[<span class="number">-1.6176</span>],</span><br><span class="line">        [<span class="number">-0.1562</span>]])), (<span class="string">&#x27;my_buffer&#x27;</span>, tensor([[<span class="number">-1.3587</span>, <span class="number">-0.4721</span>, <span class="number">-0.7553</span>],</span><br><span class="line">        [ <span class="number">0.5493</span>,  <span class="number">0.8100</span>,  <span class="number">1.4646</span>]]))])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 模型保存和加载</span></span><br><span class="line">torch.save(model.state_dict(), PATH)</span><br><span class="line">model.load_state_dict(torch.load(PATH)</span><br></pre></td></tr></table></figure>
-<h3 id="Module中的children和modules"><a href="#Module中的children和modules" class="headerlink" title="Module中的children和modules"></a>Module中的children和modules</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyModel</span>(<span class="params">nn.Module</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line">        super(MyModel, self).__init__()</span><br><span class="line">        self.lin1 = nn.Linear(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.lin2 = nn.Sequential(nn.Linear(<span class="number">1</span>, <span class="number">2</span>), nn.Linear(<span class="number">2</span>, <span class="number">1</span>))</span><br><span class="line">        lin = nn.Linear(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">        self.lin3 = nn.Sequential(lin, lin)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">self, x</span>):</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    model = MyModel()</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_children():</span><br><span class="line">        print(tup)</span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_modules():</span><br><span class="line">        print(tup)</span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_parameters():</span><br><span class="line">        print(tup)</span><br><span class="line">    print(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    print(model.state_dict())</span><br><span class="line"><span class="comment">##</span></span><br><span class="line">(<span class="string">&#x27;lin1&#x27;</span>, Linear(in_features=<span class="number">1</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin3&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;&#x27;</span>, MyModel(</span><br><span class="line">  (lin1): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (lin2): Sequential(</span><br><span class="line">    (<span class="number">0</span>): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">    (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  )</span><br><span class="line">  (lin3): Sequential(</span><br><span class="line">    (<span class="number">0</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">    (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  )</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin1&#x27;</span>, Linear(in_features=<span class="number">1</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin2.0&#x27;</span>, Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.1&#x27;</span>, Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin3&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin3.0&#x27;</span>, Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>))</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;lin1.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">0.2448</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin1.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([<span class="number">-0.7488</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.0.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">0.4151</span>],</span><br><span class="line">        [<span class="number">0.9873</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.0.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([<span class="number">-0.0301</span>,  <span class="number">0.3848</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.1.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[ <span class="number">0.4902</span>, <span class="number">-0.4937</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.1.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([<span class="number">0.2317</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin3.0.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">-0.6023</span>, <span class="number">-0.2234</span>],</span><br><span class="line">        [ <span class="number">0.4948</span>,  <span class="number">0.4749</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin3.0.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([ <span class="number">0.2648</span>, <span class="number">-0.4021</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">----------------</span><br><span class="line">OrderedDict([(<span class="string">&#x27;lin1.weight&#x27;</span>, tensor([[<span class="number">0.2448</span>]])), (<span class="string">&#x27;lin1.bias&#x27;</span>, tensor([<span class="number">-0.7488</span>])), (<span class="string">&#x27;lin2.0.weight&#x27;</span>, tensor([[<span class="number">0.4151</span>],</span><br><span class="line">        [<span class="number">0.9873</span>]])), (<span class="string">&#x27;lin2.0.bias&#x27;</span>, tensor([<span class="number">-0.0301</span>,  <span class="number">0.3848</span>])), (<span class="string">&#x27;lin2.1.weight&#x27;</span>, tensor([[ <span class="number">0.4902</span>, <span class="number">-0.4937</span>]])), (<span class="string">&#x27;lin2.1.bias&#x27;</span>, tensor([<span class="number">0.2317</span>])), (<span class="string">&#x27;lin3.0.weight&#x27;</span>, tensor([[<span class="number">-0.6023</span>, <span class="number">-0.2234</span>],</span><br><span class="line">        [ <span class="number">0.4948</span>,  <span class="number">0.4749</span>]])), (<span class="string">&#x27;lin3.0.bias&#x27;</span>, tensor([ <span class="number">0.2648</span>, <span class="number">-0.4021</span>])), (<span class="string">&#x27;lin3.1.weight&#x27;</span>, tensor([[<span class="number">-0.6023</span>, <span class="number">-0.2234</span>],</span><br><span class="line">        [ <span class="number">0.4948</span>,  <span class="number">0.4749</span>]])), (<span class="string">&#x27;lin3.1.bias&#x27;</span>, tensor([ <span class="number">0.2648</span>, <span class="number">-0.4021</span>]))])</span><br></pre></td></tr></table></figure>
-<h2 id="torch-autograd-Function"><a href="#torch-autograd-Function" class="headerlink" title="torch.autograd.Function"></a>torch.autograd.Function</h2><p><a href="https://pytorch.org/docs/1.3.1/notes/extending.html">EXTENDING PYTORCH</a></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 示例</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Exp</span>(<span class="params">Function</span>):</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">forward</span>(<span class="params">ctx, i</span>):</span></span><br><span class="line">        result = i.exp()</span><br><span class="line">        ctx.save_for_backward(result)</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backward</span>(<span class="params">ctx, grad_output</span>):</span></span><br><span class="line">        result, = ctx.saved_tensors</span><br><span class="line">        <span class="keyword">return</span> grad_output * result</span><br><span class="line"><span class="comment"># To make it easier to use these custom ops, we recommend aliasing their apply method.</span></span><br><span class="line">exp = Exp.apply</span><br></pre></td></tr></table></figure>
-<p><code>STATIC backward(ctx, *grad_outputs)</code> It must accept a context ctx as the first argument, followed by as many outputs did <code>forward()</code> return, and it should return as many tensors, as there were inputs to <code>forward()</code>. Each argument is the gradient w.r.t the given output, and each returned value should be the gradient w.r.t. the corresponding input.<br>The context can be used to retrieve tensors saved during the forward pass. It also has an attribute <code>ctx.needs_input_grad</code> as a tuple of booleans representing whether each input needs gradient. E.g., <code>backward()</code> will have <code>ctx.needs_input_grad[0] = True</code> if the first input to <code>forward()</code> needs gradient computated w.r.t. the output.</p>
-<p><code>STATIC forward(ctx, *args, **kwargs)</code> It must accept a context ctx as the first argument, followed by any number of arguments (tensors or other types). The context can be used to store tensors that can be then retrieved during the backward pass.</p>
-<h2 id="torch-Tensor"><a href="#torch-Tensor" class="headerlink" title="torch.Tensor"></a>torch.Tensor</h2><p>torch.Tensor: class, is an alias for the default tensor type (torch.FloatTensor). A tensor can be constructed from a Python list or sequence using the torch.tensor() constructor:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">torch.tensor([[<span class="number">1.</span>, <span class="number">-1.</span>], [<span class="number">1.</span>, <span class="number">-1.</span>]])</span><br><span class="line">torch.tensor(np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]]))</span><br></pre></td></tr></table></figure>
-<h3 id="item"><a href="#item" class="headerlink" title="item()"></a>item()</h3><p><code>x.item()</code> Returns the value of this tensor as a standard Python number. This only works for tensors with one element. This operation is not differentiable.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = torch.tensor([[<span class="number">1</span>]])</span><br><span class="line">x  <span class="comment"># tensor([[1]])</span></span><br><span class="line">x.item()  <span class="comment"># 1</span></span><br></pre></td></tr></table></figure>
-<h3 id="clone-和detach"><a href="#clone-和detach" class="headerlink" title="clone()和detach()"></a>clone()和detach()</h3><p><code>x.clone()</code> Returns a copy of the self tensor. The copy has the same size and data type as self. Unlike <code>copy_()</code>, this function is <strong>recorded in the computation graph</strong>. Gradients propagating to the cloned tensor will propagate to the original tensor. 开辟新的内存。<br><code>x.detach()</code> Returns a new Tensor, detached from the current graph. The result will <strong>never require gradient</strong>. Returned Tensor <strong>shares the same storage</strong> with the original one.<br><a href="https://blog.csdn.net/guofei_fly/article/details/104486708">【Pytorch】对比clone、detach以及copy_等张量复制操作</a></p>
-<h3 id="contiguous"><a href="#contiguous" class="headerlink" title="contiguous()"></a>contiguous()</h3><p>Returns a contiguous tensor containing the same data as self tensor. If self tensor is contiguous, this function returns the self tensor.<br><a href="https://zhuanlan.zhihu.com/p/64551412">PyTorch中的contiguous</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>PyTorch</tag>
       </tags>
   </entry>
 </search>
