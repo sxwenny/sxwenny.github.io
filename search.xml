@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git 相关</title>
-    <url>/2020/11/05/Git%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>Git撤销push：<a href="https://www.cnblogs.com/chaoxiZ/p/9714085.html">Git撤销对远程仓库的push&amp;commit提交</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git log</span><br><span class="line">git reset --hard &lt;版本号&gt;</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
-<a id="more"></a>]]></content>
+    <title>ECCV 2020 Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</title>
+    <url>/2020/12/05/ECCV-2020-Unsupervised-Domain-Adaptation-with-Noise-Resistible-Mutual-Training-for-Person-Re-identification/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/1391_ECCV_2020_paper.php">Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</a><br>Fang Zhao, Shengcai Liao, Guo-Sen Xie, Jian Zhao, Kaihao Zhang, Ling Shao.<br>Inception Institute of Artificial Intelligence.</p>
+</blockquote>
+<p>行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。</p>
+<a id="more"></a>
+<hr>
+<h2 id="Mutual-Training-with-Collaborative-Clustering"><a href="#Mutual-Training-with-Collaborative-Clustering" class="headerlink" title="Mutual-Training with Collaborative Clustering"></a>Mutual-Training with Collaborative Clustering</h2><p><img src="/download/4.png"></p>
+<blockquote>
+<p>Usually noisy instances caused by clustering are relatively hard examples, thus if one instance is assigned two labels, the networks will fit the clean (easy) one first to become robust and the error may be eliminated at the next iteration.</p>
+</blockquote>
+<h2 id="Mutual-Instance-Selection"><a href="#Mutual-Instance-Selection" class="headerlink" title="Mutual Instance Selection"></a>Mutual Instance Selection</h2><h3 id="Reliable-Instance-Selection-by-Peer-Confidence"><a href="#Reliable-Instance-Selection-by-Peer-Confidence" class="headerlink" title="Reliable Instance Selection by Peer-Confidence"></a>Reliable Instance Selection by Peer-Confidence</h3><p><img src="/download/5.png"><br><img src="/download/6.png"></p>
+<h3 id="Informative-Instance-Selection-by-Relationship-Disagreement"><a href="#Informative-Instance-Selection-by-Relationship-Disagreement" class="headerlink" title="Informative Instance Selection by Relationship Disagreement"></a>Informative Instance Selection by Relationship Disagreement</h3><p><img src="/download/7.png"><br><img src="/download/8.png"><br>Only the clean and informative triplets are used for the network update.</p>
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p><img src="/download/9.png"></p>
+]]></content>
       <categories>
-        <category>Git</category>
+        <category>paper</category>
       </categories>
       <tags>
-        <tag>Git</tag>
+        <tag>re-ID</tag>
       </tags>
   </entry>
   <entry>
@@ -28,6 +39,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Git 相关</title>
+    <url>/2020/11/05/Git%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>Git撤销push：<a href="https://www.cnblogs.com/chaoxiZ/p/9714085.html">Git撤销对远程仓库的push&amp;commit提交</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git log</span><br><span class="line">git reset --hard &lt;版本号&gt;</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
+<a id="more"></a>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ICCV 2019 Self-similarity Grouping: A Simple Unsupervised Cross Domain Adaptation Approach for Person Re-identification</title>
     <url>/2020/12/08/ICCV-2019-Self-similarity-Grouping-A-Simple-Unsupervised-Cross-Domain-Adaptation-Approach-for-Person-Re-identification/</url>
     <content><![CDATA[<blockquote>
@@ -40,30 +64,6 @@
 <h2 id="Unsupervised-Self-similarity-Grouping-SSG"><a href="#Unsupervised-Self-similarity-Grouping-SSG" class="headerlink" title="Unsupervised Self-similarity Grouping (SSG)"></a>Unsupervised Self-similarity Grouping (SSG)</h2><p><img src="/download/13.png"><br><img src="/download/14.png"></p>
 <h2 id="Clustering-guided-Semi-Supervised-Training"><a href="#Clustering-guided-Semi-Supervised-Training" class="headerlink" title="Clustering-guided Semi-Supervised Training"></a>Clustering-guided Semi-Supervised Training</h2><p>we employ the unsupervised clustering algorithm on $f_t$ to generate $N_g$ groups. Then, we randomly sample a single image from each group to form a very small sub-dataset $X_g$ with $N_g$ images. Next, we label this small sub-dataset manually and perform labels assignment based on this annotation.<br>Specifically, we extract features of all images in sub-dataset $X_g$ and obtain three feature vector sets $f_g$ $f_{g-up}$ $f_{g-low}$ and treat each of them as an identity dictionary. Given an unlabeled image $x_t^i$, we find the most similar images from $X_g$ by different cues, whole bodies, upper parts and lower parts, and assign $x_t^i$ with corresponding labels:<br>Note that we employ the k-reciprocal encoding as the distance metric for similarity measurement.<br><img src="/download/16.png"><br><img src="/download/18.png"></p>
 <h2 id="SSG"><a href="#SSG" class="headerlink" title="SSG++"></a>SSG++</h2><p><img src="/download/15.png"><br><img src="/download/19.png"></p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ECCV 2020 Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</title>
-    <url>/2020/12/05/ECCV-2020-Unsupervised-Domain-Adaptation-with-Noise-Resistible-Mutual-Training-for-Person-Re-identification/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/1391_ECCV_2020_paper.php">Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</a><br>Fang Zhao, Shengcai Liao, Guo-Sen Xie, Jian Zhao, Kaihao Zhang, Ling Shao.<br>Inception Institute of Artificial Intelligence.</p>
-</blockquote>
-<p>行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。</p>
-<a id="more"></a>
-<hr>
-<h2 id="Mutual-Training-with-Collaborative-Clustering"><a href="#Mutual-Training-with-Collaborative-Clustering" class="headerlink" title="Mutual-Training with Collaborative Clustering"></a>Mutual-Training with Collaborative Clustering</h2><p><img src="/download/4.png"></p>
-<blockquote>
-<p>Usually noisy instances caused by clustering are relatively hard examples, thus if one instance is assigned two labels, the networks will fit the clean (easy) one first to become robust and the error may be eliminated at the next iteration.</p>
-</blockquote>
-<h2 id="Mutual-Instance-Selection"><a href="#Mutual-Instance-Selection" class="headerlink" title="Mutual Instance Selection"></a>Mutual Instance Selection</h2><h3 id="Reliable-Instance-Selection-by-Peer-Confidence"><a href="#Reliable-Instance-Selection-by-Peer-Confidence" class="headerlink" title="Reliable Instance Selection by Peer-Confidence"></a>Reliable Instance Selection by Peer-Confidence</h3><p><img src="/download/5.png"><br><img src="/download/6.png"></p>
-<h3 id="Informative-Instance-Selection-by-Relationship-Disagreement"><a href="#Informative-Instance-Selection-by-Relationship-Disagreement" class="headerlink" title="Informative Instance Selection by Relationship Disagreement"></a>Informative Instance Selection by Relationship Disagreement</h3><p><img src="/download/7.png"><br><img src="/download/8.png"><br>Only the clean and informative triplets are used for the network update.</p>
-<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p><img src="/download/9.png"></p>
 ]]></content>
       <categories>
         <category>paper</category>
@@ -89,61 +89,6 @@
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</title>
-    <url>/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://www.sciencedirect.com/science/article/pii/S003132031930473X">Unsupervised domain adaptive re-identification: Theory and practice</a><br><a href="https://github.com/LcDog/DomainAdaptiveReID">https://github.com/LcDog/DomainAdaptiveReID</a><br>Liangchen Song, Cheng Wang, Lefei Zhang, et al.<br>Wuhan University, Horizon Robotics, Huazhong University of Science and Technology.</p>
-</blockquote>
-<p>将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。</p>
-<a id="more"></a>
-<hr>
-<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><p><img src="/download/1.png"></p>
-<blockquote>
-<p>In the context of re-ID tasks, two questions are of concern:<br>1.Under what conditions are unsupervised domain adaptive re-ID tasks DA-learnable?<br>2.How does the theoretical conditions help practical algorithms?</p>
-</blockquote>
-<p>对于问题1，根据论文[1]对分类任务做的3个假设，提出re-ID中的3个假设：</p>
-<ol>
-<li><strong>covariate assumption</strong>: the criteria of classifying feature pairs is the same between two domains;</li>
-<li><strong>Separately Probabilistic Lipschitzness</strong>: the feature pairs can be divided into clusters;</li>
-<li><strong>weight ratio</strong>: concerning the probability of existing a repeated feature among all the features from the two domains.</li>
-</ol>
-<p>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</p>
-<p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.</p>
-<p>根据上述假设, we propose several loss functions on the encoder and samples with guessed label. And the problem of selecting which sample with guessed label to train is optimized by minimizing the proposed loss functions.<br>For the Separately Probabilistic Lipschitzness assumption, we wish to minimize the intra-cluster and maximize inter-cluster distance. Then the sample selecting problem is turned into <strong>data clustering</strong> problem and minimizing loss functions is transformed into finding a <strong>distance metric</strong> for the data.<br>Further, another metric for Weight Ratio is designed.<br>After combining the two metrics together, we end up with a distance evaluating the confidence of the guessed labels.<br>Finally, the DBSCAN clustering method is employed to generate data clusters according to a threshold on the distance. With pseudo-labels on selected data cluster from target domain, the encoder is trained with triplet loss.</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br><img src="/download/3.png"><br>假设2和3最后实现时转变成设计distance metric，用k-reciprocal encoding计算距离，再用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
-<p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
-    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
-</blockquote>
-<p>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。</p>
-<a id="more"></a>
-<hr>
-<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
-<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
-<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
-<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
-</blockquote>
-<p><img src="/download/12.png"></p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
       </tags>
   </entry>
   <entry>
@@ -239,6 +184,61 @@
 ]]></content>
       <categories>
         <category>re-ID</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</title>
+    <url>/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S003132031930473X">Unsupervised domain adaptive re-identification: Theory and practice</a><br><a href="https://github.com/LcDog/DomainAdaptiveReID">https://github.com/LcDog/DomainAdaptiveReID</a><br>Liangchen Song, Cheng Wang, Lefei Zhang, et al.<br>Wuhan University, Horizon Robotics, Huazhong University of Science and Technology.</p>
+</blockquote>
+<p>将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。</p>
+<a id="more"></a>
+<hr>
+<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><p><img src="/download/1.png"></p>
+<blockquote>
+<p>In the context of re-ID tasks, two questions are of concern:<br>1.Under what conditions are unsupervised domain adaptive re-ID tasks DA-learnable?<br>2.How does the theoretical conditions help practical algorithms?</p>
+</blockquote>
+<p>对于问题1，根据论文[1]对分类任务做的3个假设，提出re-ID中的3个假设：</p>
+<ol>
+<li><strong>covariate assumption</strong>: the criteria of classifying feature pairs is the same between two domains;</li>
+<li><strong>Separately Probabilistic Lipschitzness</strong>: the feature pairs can be divided into clusters;</li>
+<li><strong>weight ratio</strong>: concerning the probability of existing a repeated feature among all the features from the two domains.</li>
+</ol>
+<p>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</p>
+<p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.</p>
+<p>根据上述假设, we propose several loss functions on the encoder and samples with guessed label. And the problem of selecting which sample with guessed label to train is optimized by minimizing the proposed loss functions.<br>For the Separately Probabilistic Lipschitzness assumption, we wish to minimize the intra-cluster and maximize inter-cluster distance. Then the sample selecting problem is turned into <strong>data clustering</strong> problem and minimizing loss functions is transformed into finding a <strong>distance metric</strong> for the data.<br>Further, another metric for Weight Ratio is designed.<br>After combining the two metrics together, we end up with a distance evaluating the confidence of the guessed labels.<br>Finally, the DBSCAN clustering method is employed to generate data clusters according to a threshold on the distance. With pseudo-labels on selected data cluster from target domain, the encoder is trained with triplet loss.</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br><img src="/download/3.png"><br>假设2和3最后实现时转变成设计distance metric，用k-reciprocal encoding计算距离，再用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
+<p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
+    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
+</blockquote>
+<p>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。</p>
+<a id="more"></a>
+<hr>
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
+<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
+<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
+</blockquote>
+<p><img src="/download/12.png"></p>
+]]></content>
+      <categories>
+        <category>paper</category>
       </categories>
       <tags>
         <tag>re-ID</tag>
@@ -433,7 +433,7 @@
 <p><strong>torchvision.transforms.ToTensor</strong>: Convert a PIL Image or numpy.ndarray to tensor.<br>Converts a <strong>PIL Image</strong> or <strong>numpy.ndarray (H x W x C) in the range [0, 255]</strong> to a <strong>torch.FloatTensor of shape (C x H x W) in the range [0.0, 1.0]</strong> if the PIL Image belongs to one of the modes (L, LA, P, I, F, RGB, YCbCr, RGBA, CMYK, 1) or if the numpy.ndarray has dtype = np.uint8.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PIL.Image读的图片为 W*H，通道为 RGB</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">im = Image.open(fpath).convert(<span class="string">&#x27;RGB&#x27;</span>)</span><br><span class="line">print(im.size)  <span class="comment"># (w, h)</span></span><br><span class="line">print(im.mode)  <span class="comment"># &#x27;RGB&#x27;</span></span><br><span class="line">a = np.asarray(im)</span><br><span class="line">print(a.shape)  <span class="comment"># (h, w, c)</span></span><br><span class="line">im = Image.fromarray(a)</span><br><span class="line"></span><br><span class="line"><span class="comment"># opencv读的图片为 H*W，通道为 BGR</span></span><br><span class="line">im = cv2.imread(fpath, cv2.IMREAD_COLOR)</span><br><span class="line">print(im.shape)  <span class="comment"># (h, w, c)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># a的通道为 RGB，im的通道为 BGR</span></span><br></pre></td></tr></table></figure>
 <h2 id="Loss-functions"><a href="#Loss-functions" class="headerlink" title="Loss functions"></a>Loss functions</h2><h3 id="NLLLoss"><a href="#NLLLoss" class="headerlink" title="NLLLoss"></a>NLLLoss</h3><p>CLASS: <code>torch.nn.NLLLoss(weight=None, size_average=None, ignore_index=-100, reduce=None, reduction=&#39;mean&#39;)</code><br>FUNCTION: <code>torch.nn.functional.nll_loss(input, target, weight=None, size_average=None, ignore_index=-100, reduce=None, reduction=&#39;mean&#39;)</code><br>The negative log likelihood loss. It is useful to train a classification problem with C classes.</p>
-<p><strong>size_average</strong>: Deprecated.<br><strong>reduce</strong>: Deprecated.<br><strong>weight</strong>: a manual rescaling weight given to each class. If given, it has to be a Tensor of size $C$. Otherwise, it is treated as if having all ones. This is particularly useful when you have an unbalanced training set.<br><strong>ignore_index</strong>: Specifies a target value that is ignored and does not contribute to the input gradient.<br><strong>reduction</strong>: Specifies the reduction to apply to the output: <code>&#39;none&#39; | &#39;mean&#39; | &#39;sum&#39;</code>.</p>
+<p><strong>size_average</strong>: Deprecated.<br><strong>reduce</strong>: Deprecated.<br><strong>weight</strong>: a manual rescaling weight given to each class. If given, it has to be a Tensor of size $C$. Otherwise, it is treated as if having all ones. This is particularly useful when you have an unbalanced training set.<br><strong>ignore_index</strong>: Specifies a target value that is ignored and does not contribute to the input gradient. When <code>reduction=&#39;mean&#39;</code>, the loss is averaged over non-ignored targets.<br><strong>reduction</strong>: Specifies the reduction to apply to the output: <code>&#39;none&#39; | &#39;mean&#39; | &#39;sum&#39;</code>.</p>
 <p><strong><em>input</em></strong>: log-probabilities of each class, Tensor of size either $(N,C)$ or $(N,C,d_1,d_2,\ldots,d_K)$ with $K\geq1$ for the K-dimensional case.<br>Obtaining log-probabilities in a neural network is easily achieved by adding a <em>LogSoftmax</em> layer in the last layer of your network. You may use <em>CrossEntropyLoss</em> instead, if you prefer not to add an extra layer.<br><strong><em>target</em></strong>: class index in the range $[0,C-1]$; if <em>ignore_index</em> is specified, this loss also accepts this class index (this index may not necessarily be in the class range). Tensor of size either $(N)$ or $(N,d_1,d_2,\ldots,d_K)$ with $K\geq1$ for the K-dimensional case.<br><strong><em>Output</em></strong>: scalar. If reduction is ‘none’, then the same size as the target: $(N)$ or $(N,d_1,d_2,\ldots,d_K)$ with $K\geq1$ for the K-dimensional case.</p>
 <p><code>reduction=&#39;none&#39;</code>, loss:<br><img src="/download/20.png"><br><code>reduction=&#39;mean&#39;</code>or <code>reduction=&#39;sum&#39;</code>, loss:<br><img src="/download/21.png"><br>In the K-dimensional case, it computes NLL loss per-pixel.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"></span><br><span class="line">input = torch.randn(<span class="number">3</span>, <span class="number">5</span>, requires_grad=<span class="literal">True</span>)</span><br><span class="line">print(F.log_softmax(input, dim=<span class="number">1</span>))</span><br><span class="line"><span class="comment"># tensor([[-1.1773, -3.1962, -2.5500, -0.9069, -1.7771],</span></span><br><span class="line"><span class="comment">#         [-1.0217, -1.2633, -1.9184, -2.0835, -2.4538],</span></span><br><span class="line"><span class="comment">#         [-3.0267, -2.3012, -2.4655, -0.6980, -1.3137]],</span></span><br><span class="line"><span class="comment">#        grad_fn=&lt;LogSoftmaxBackward&gt;)</span></span><br><span class="line">target = torch.tensor([<span class="number">1</span>, <span class="number">0</span>, <span class="number">4</span>])</span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([3.1962, 1.0217, 1.3137], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target)</span><br><span class="line"><span class="comment"># tensor(1.8439, grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, weight=torch.tensor([<span class="number">1.</span>,<span class="number">2.</span>,<span class="number">3.</span>,<span class="number">4.</span>,<span class="number">5.</span>]), reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([6.3925, 1.0217, 6.5687], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, ignore_index=<span class="number">4</span>, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([3.1962, 1.0217, 0.0000], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">target = torch.tensor([<span class="number">1</span>, <span class="number">-1</span>, <span class="number">-1</span>])</span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, ignore_index=<span class="number">-1</span>, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([3.1962, 0.0000, 0.0000], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, weight=torch.tensor([<span class="number">1.</span>,<span class="number">2.</span>,<span class="number">3.</span>,<span class="number">4.</span>,<span class="number">5.</span>]), ignore_index=<span class="number">-1</span>, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([6.3925, 0.0000, 0.0000], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, ignore_index=<span class="number">-1</span>)</span><br><span class="line"><span class="comment"># tensor(3.1962, grad_fn=&lt;NllLossBackward&gt;)</span></span><br></pre></td></tr></table></figure>]]></content>
