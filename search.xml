@@ -94,6 +94,29 @@
       </tags>
   </entry>
   <entry>
+    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
+    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
+</blockquote>
+<p>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。</p>
+<a id="more"></a>
+<hr>
+<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
+<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
+<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
+</blockquote>
+<p><img src="/download/12.png"></p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</title>
     <url>/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/</url>
     <content><![CDATA[<blockquote>
@@ -126,23 +149,98 @@
       </tags>
   </entry>
   <entry>
-    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
-    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
-</blockquote>
-<p>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。</p>
+    <title>re-ID 相关</title>
+    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
+<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
 <a id="more"></a>
-<hr>
-<h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
-<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
-<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
-<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
-</blockquote>
-<p><img src="/download/12.png"></p>
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
+<thead>
+<tr>
+<th align="center">Market-1501</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">12936</td>
+<td align="center">751</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">3368</td>
+<td align="center">750</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">15913/19732</td>
+<td align="center">750+1</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">DukeMTMC-reID</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">16522</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">2228</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">17661</td>
+<td align="center">702+408</td>
+<td align="center">8</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">MSMT17_V1</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">30248</td>
+<td align="center">1041</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">11659</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">82161</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
-        <category>paper</category>
+        <category>re-ID</category>
       </categories>
       <tags>
         <tag>re-ID</tag>
@@ -302,104 +400,6 @@
       </tags>
   </entry>
   <entry>
-    <title>re-ID 相关</title>
-    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
-    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
-<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
-<a id="more"></a>
-<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
-<thead>
-<tr>
-<th align="center">Market-1501</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">12936</td>
-<td align="center">751</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">3368</td>
-<td align="center">750</td>
-<td align="center">6</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">15913/19732</td>
-<td align="center">750+1</td>
-<td align="center">6</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">DukeMTMC-reID</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">16522</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">2228</td>
-<td align="center">702</td>
-<td align="center">8</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">17661</td>
-<td align="center">702+408</td>
-<td align="center">8</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">MSMT17_V1</th>
-<th align="center">images</th>
-<th align="center">ids</th>
-<th align="center">cameras</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">train</td>
-<td align="center">30248</td>
-<td align="center">1041</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">query</td>
-<td align="center">11659</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-<tr>
-<td align="center">gallery</td>
-<td align="center">82161</td>
-<td align="center">3060</td>
-<td align="center">15</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>re-ID</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PyTorch相关</title>
     <url>/2020/11/09/PyTorch%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<p>记录模块torch.nn.Parameter、torch.nn.Module、torch.autograd.Function，和常见的函数。</p>
@@ -441,6 +441,10 @@
 <p><strong><em>input</em></strong>: log-probabilities of each class, Tensor of size either $(N,C)$ or $(N,C,d_1,d_2,\ldots,d_K)$ with $K\geq1$ for the K-dimensional case.<br>Obtaining log-probabilities in a neural network is easily achieved by adding a <em>LogSoftmax</em> layer in the last layer of your network. You may use <em>CrossEntropyLoss</em> instead, if you prefer not to add an extra layer.<br><strong><em>target</em></strong>: class index in the range $[0,C-1]$; if <em>ignore_index</em> is specified, this loss also accepts this class index (this index may not necessarily be in the class range). Tensor of size either $(N)$ or $(N,d_1,d_2,\ldots,d_K)$ with $K\geq1$ for the K-dimensional case.<br><strong><em>Output</em></strong>: scalar. If reduction is ‘none’, then the same size as the target: $(N)$ or $(N,d_1,d_2,\ldots,d_K)$ with $K\geq1$ for the K-dimensional case.</p>
 <p><code>reduction=&#39;none&#39;</code>, loss:<br><img src="/download/20.png"><br><code>reduction=&#39;mean&#39;</code>or <code>reduction=&#39;sum&#39;</code>, loss:<br><img src="/download/21.png"><br>In the K-dimensional case, it computes NLL loss per-pixel.</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"></span><br><span class="line">input = torch.randn(<span class="number">3</span>, <span class="number">5</span>, requires_grad=<span class="literal">True</span>)</span><br><span class="line">print(F.log_softmax(input, dim=<span class="number">1</span>))</span><br><span class="line"><span class="comment"># tensor([[-1.1773, -3.1962, -2.5500, -0.9069, -1.7771],</span></span><br><span class="line"><span class="comment">#         [-1.0217, -1.2633, -1.9184, -2.0835, -2.4538],</span></span><br><span class="line"><span class="comment">#         [-3.0267, -2.3012, -2.4655, -0.6980, -1.3137]],</span></span><br><span class="line"><span class="comment">#        grad_fn=&lt;LogSoftmaxBackward&gt;)</span></span><br><span class="line">target = torch.tensor([<span class="number">1</span>, <span class="number">0</span>, <span class="number">4</span>])</span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([3.1962, 1.0217, 1.3137], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target)</span><br><span class="line"><span class="comment"># tensor(1.8439, grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, weight=torch.tensor([<span class="number">1.</span>,<span class="number">2.</span>,<span class="number">3.</span>,<span class="number">4.</span>,<span class="number">5.</span>]), reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([6.3925, 1.0217, 6.5687], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, ignore_index=<span class="number">4</span>, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([3.1962, 1.0217, 0.0000], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">target = torch.tensor([<span class="number">1</span>, <span class="number">-1</span>, <span class="number">-1</span>])</span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, ignore_index=<span class="number">-1</span>, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([3.1962, 0.0000, 0.0000], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, weight=torch.tensor([<span class="number">1.</span>,<span class="number">2.</span>,<span class="number">3.</span>,<span class="number">4.</span>,<span class="number">5.</span>]), ignore_index=<span class="number">-1</span>, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([6.3925, 0.0000, 0.0000], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(input, dim=<span class="number">1</span>), target, ignore_index=<span class="number">-1</span>)</span><br><span class="line"><span class="comment"># tensor(3.1962, grad_fn=&lt;NllLossBackward&gt;)</span></span><br></pre></td></tr></table></figure>
+<h3 id="BCEWithLogitsLoss"><a href="#BCEWithLogitsLoss" class="headerlink" title="BCEWithLogitsLoss"></a>BCEWithLogitsLoss</h3><p>CLASS: <code>torch.nn.BCEWithLogitsLoss(weight=None, size_average=None, reduce=None, reduction=&#39;mean&#39;, pos_weight=None)</code><br>This loss combines a <em>Sigmoid</em> layer and the <em>BCELoss</em> in one single class.</p>
+<p><strong>size_average</strong>: Deprecated.<br><strong>reduce</strong>: Deprecated.<br><strong>weight</strong>: a manual rescaling weight given to the loss of each batch element. If given, has to be a Tensor of size nbatch.<br><strong>reduction</strong>: Specifies the reduction to apply to the output: <code>&#39;none&#39; | &#39;mean&#39; | &#39;sum&#39;</code>.<br><strong>pos_weight</strong>: a weight of positive examples. Must be a vector with length equal to the number of classes.</p>
+<p><strong><em>Input</em></strong>: (N, <em>).<br>**</em>target*<strong>: (N, *), numbers between 0 and 1.<br>*</strong>Output***: scalar. If reduction is ‘none’, then (N, *), same shape as input.</p>
+<p><code>reduction=&#39;none&#39;</code>, loss:<br><img src="/download/22.png"><br><code>reduction=&#39;mean&#39;</code>or <code>reduction=&#39;sum&#39;</code>, loss:<br><img src="/download/23.png"><br>It’s possible to trade off recall and precision by adding weights to positive examples. multi-label classification:<br><img src="/download/24.png"></p>
 <h2 id="torch-nn-functional"><a href="#torch-nn-functional" class="headerlink" title="torch.nn.functional"></a>torch.nn.functional</h2><p><code>torch.nn.functional.normalize(input, p=2, dim=1, eps=1e-12, out=None)</code><br>Performs $L_p$ normalization of inputs over specified dimension.<br>$$<br>v=\frac{v}{\max(||v||_p, \epsilon)}<br>$$</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"></span><br><span class="line">a = torch.tensor([[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>]], dtype=torch.float)</span><br><span class="line">a = F.normalize(a)</span><br><span class="line"><span class="comment"># tensor([[0.5774, 0.5774, 0.5774],</span></span><br><span class="line"><span class="comment">#         [0.3333, 0.6667, 0.6667]])</span></span><br></pre></td></tr></table></figure>
 <p><code>x.norm(p=&#39;fro&#39;, dim=None, keepdim=False, dtype=None)</code><br><code>torch.norm(input, p=&#39;fro&#39;, dim=None, keepdim=False, out=None, dtype=None)</code><br>Returns the matrix norm or vector norm of a given tensor.</p>
