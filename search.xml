@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Git 相关</title>
+    <url>/2020/11/05/Git%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>Git撤销push：<a href="https://www.cnblogs.com/chaoxiZ/p/9714085.html">Git撤销对远程仓库的push&amp;commit提交</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git log</span><br><span class="line">git reset --hard &lt;版本号&gt;</span><br><span class="line">git push --force</span><br></pre></td></tr></table></figure>
+<span id="more"></span>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Anaconda 和 Python</title>
+    <url>/2020/10/15/Anaconda%E5%92%8CPython/</url>
+    <content><![CDATA[<p>由于旧博客的文档没有备份，只能重新弄了github账户，重搭了博客，博客搭建参考增瑞师兄<a href="https://darlewo.cn/Github_Actions_Blog_Automation_deploying.html">Github Actions全自动博客部署</a>，<a href="https://zhuanlan.zhihu.com/p/251383216">hexo主题安装以及next8.0主题美化</a>。</p>
+<p>旧博客Anaconda和Python整理：<a href="https://zoesxw.github.io/2018/05/08/anaconda%E6%80%BB%E7%BB%93/">anaconda总结</a>，<a href="https://zoesxw.github.io/tags/">python文档</a>。</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Anaconda</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ECCV 2020 Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</title>
+    <url>/2020/12/05/ECCV-2020-Unsupervised-Domain-Adaptation-with-Noise-Resistible-Mutual-Training-for-Person-Re-identification/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/1391_ECCV_2020_paper.php">Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</a><br>Fang Zhao, Shengcai Liao, Guo-Sen Xie, Jian Zhao, Kaihao Zhang, Ling Shao.<br>Inception Institute of Artificial Intelligence.</p>
+</blockquote>
+<h2 id="行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。"><a href="#行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。" class="headerlink" title="行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。"></a>行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。<br><span id="more"></span></h2><h2 id="Mutual-Training-with-Collaborative-Clustering"><a href="#Mutual-Training-with-Collaborative-Clustering" class="headerlink" title="Mutual-Training with Collaborative Clustering"></a>Mutual-Training with Collaborative Clustering</h2><p><img src="/download/4.png"></p>
+<blockquote>
+<p>Usually noisy instances caused by clustering are relatively hard examples, thus if one instance is assigned two labels, the networks will fit the clean (easy) one first to become robust and the error may be eliminated at the next iteration.</p>
+</blockquote>
+<h2 id="Mutual-Instance-Selection"><a href="#Mutual-Instance-Selection" class="headerlink" title="Mutual Instance Selection"></a>Mutual Instance Selection</h2><h3 id="Reliable-Instance-Selection-by-Peer-Confidence"><a href="#Reliable-Instance-Selection-by-Peer-Confidence" class="headerlink" title="Reliable Instance Selection by Peer-Confidence"></a>Reliable Instance Selection by Peer-Confidence</h3><p><img src="/download/5.png"><br><img src="/download/6.png"></p>
+<h3 id="Informative-Instance-Selection-by-Relationship-Disagreement"><a href="#Informative-Instance-Selection-by-Relationship-Disagreement" class="headerlink" title="Informative Instance Selection by Relationship Disagreement"></a>Informative Instance Selection by Relationship Disagreement</h3><p><img src="/download/7.png"><br><img src="/download/8.png"><br>Only the clean and informative triplets are used for the network update.</p>
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p><img src="/download/9.png"></p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 相关</title>
+    <url>/2020/11/20/Linux%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>记录Linux相关的命令。</p>
+<span id="more"></span>
+<p>………………………………………………………………………………………………………………………………………………………………..<br><a href="http://cyyan.cn/2019/05/11/%E5%AE%89%E8%A3%85ubuntu16.04%20%E7%B3%BB%E7%BB%9F%E5%8F%8A1080ti%E9%85%8D%E7%BD%AEcuda%E7%9A%84%E8%AE%B0%E5%BD%95/">安装ubuntu16.04 系统及1080ti配置cuda的记录</a><br>打开bashrc文件<code>$ vim ~/.bashrc</code>将以下两行环境变量添加至文档最后，保存退出后执行bashrc文件<code>$ source ~/.bashrc</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export PATH=/usr/local/cuda/bin$&#123;PATH:+:$&#123;PATH&#125;&#125;</span><br><span class="line">export LD_LIBRARY_PATH=/usr/local/cuda/lib64$&#123;LD_LIBRARY_PATH:+:$&#123;LD_LIBRARY_PATH&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>检查驱动版本<code>$ cat /proc/driver/nvidia/version</code>，检查cuda版本<code>$ nvcc -V</code>，<code>cat /usr/local/cuda/version.txt</code>，查看显卡信息<code>$ nvidia-smi</code>。</p>
+<p>………………………………………………………………………………………………………………………………………………………………..<br><a href="https://blog.csdn.net/lillian_cl/article/details/78179950">Linux 无进程显存占用问题</a><br><code>fuser -v /dev/nvidia*</code> 显示top不会显示的进程。</p>
+<p>………………………………………………………………………………………………………………………………………………………………..<br><code>gpustat</code> 查看GPU。</p>
+<p>………………………………………………………………………………………………………………………………………………………………..<br><code>df -h</code> 查看硬盘剩余空间。<br><code>du -h --max-depth=1</code> 查看当前目录所占空间。</p>
+<p>………………………………………………………………………………………………………………………………………………………………..<br><code>cp</code>用来进行这台机子上的文件&#x2F;文件夹复制，而<code>scp</code>表示这台机子和另一台机子的文件&#x2F;文件夹复制。<br><code>cp dir1/1.txt dir2</code> 将dir1下的1.txt文件复制到dir2目录下；<br><code>cp -r dir1 dir2</code> 将dir1及dir1下所包含的文件复制到dir2下；<br><code>cp -r dir1/. dir2</code> 将dir1下的文件复制到dir2下，不包括dir1目录。</p>
+<p><code>mv</code>移动命令：目标目录与原目录一致，指定了新文件名，效果就是仅仅重命名。目标目录与原目录不一致，没有指定新文件名，效果就是仅仅移动。目标目录与原目录不一致，指定了新文件名，效果就是：移动 + 重命名。<br><code>mv dir1/1.txt dir2</code> 将dir1下的1.txt文件移动到dir2目录下；<br><code>mv dir1 dir2</code> 将dir1目录移动到dir2下；<br><code>mv dir1/1.txt dir1/11.txt</code> 重命名dir1下的1.txt为11.txt；<br><code>mv dir1 dir11</code> 重命名目录dir1为dir11。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ICCV 2019 Self-similarity Grouping: A Simple Unsupervised Cross Domain Adaptation Approach for Person Re-identification</title>
+    <url>/2020/12/08/ICCV-2019-Self-similarity-Grouping-A-Simple-Unsupervised-Cross-Domain-Adaptation-Approach-for-Person-Re-identification/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://openaccess.thecvf.com/content_ICCV_2019/html/Fu_Self-Similarity_Grouping_A_Simple_Unsupervised_Cross_Domain_Adaptation_Approach_for_ICCV_2019_paper.html">Self-Similarity Grouping: A Simple Unsupervised Cross Domain Adaptation Approach for Person Re-Identification</a><br><a href="https://github.com/SHI-Labs/Self-Similarity-Grouping">https://github.com/SHI-Labs/Self-Similarity-Grouping</a><br><a href="https://www.youtube.com/watch?v=xzygVl7ZncQ">youtube 1:28:21</a><br>Yang Fu, Yunchao Wei, Guanshuo Wang, Yuqian Zhou, et al.<br>University of Illinois at Urbana-Champaign, University of Technology Sydney.</p>
+</blockquote>
+<h2 id="关注目标域上特征的相似性。提出了Self-similarity-Grouping-SSG-方法，从全局和局部构建多个聚类，进行聚类和训练的迭代过程；在SSG上，基于聚类得到的伪标签提出了半监督的训练策略，实现one-shot-domain-adaption-in-an-open-set-setting，将它集成在SSG框架中，进行无监督分支和半监督分支的一起学习，得到SSG-。没有明白具体的训练过程。"><a href="#关注目标域上特征的相似性。提出了Self-similarity-Grouping-SSG-方法，从全局和局部构建多个聚类，进行聚类和训练的迭代过程；在SSG上，基于聚类得到的伪标签提出了半监督的训练策略，实现one-shot-domain-adaption-in-an-open-set-setting，将它集成在SSG框架中，进行无监督分支和半监督分支的一起学习，得到SSG-。没有明白具体的训练过程。" class="headerlink" title="关注目标域上特征的相似性。提出了Self-similarity Grouping (SSG)方法，从全局和局部构建多个聚类，进行聚类和训练的迭代过程；在SSG上，基于聚类得到的伪标签提出了半监督的训练策略，实现one-shot domain adaption in an open set setting，将它集成在SSG框架中，进行无监督分支和半监督分支的一起学习，得到SSG++。没有明白具体的训练过程。"></a>关注目标域上特征的相似性。提出了Self-similarity Grouping (SSG)方法，从全局和局部构建多个聚类，进行聚类和训练的迭代过程；在SSG上，基于聚类得到的伪标签提出了半监督的训练策略，实现one-shot domain adaption in an open set setting，将它集成在SSG框架中，进行无监督分支和半监督分支的一起学习，得到SSG++。没有明白具体的训练过程。<br><span id="more"></span></h2><h2 id="Fully-Supervised-Pretraining"><a href="#Fully-Supervised-Pretraining" class="headerlink" title="Fully Supervised Pretraining"></a>Fully Supervised Pretraining</h2><p>ResNet50 GAP后接两层全连接，FC-2048和FC-#ID，FC-#ID后用交叉熵损失，FC-2048后用三元组损失。<br><img src="/download/17.png"></p>
+<h2 id="Unsupervised-Self-similarity-Grouping-SSG"><a href="#Unsupervised-Self-similarity-Grouping-SSG" class="headerlink" title="Unsupervised Self-similarity Grouping (SSG)"></a>Unsupervised Self-similarity Grouping (SSG)</h2><p><img src="/download/13.png"><br><img src="/download/14.png"></p>
+<h2 id="Clustering-guided-Semi-Supervised-Training"><a href="#Clustering-guided-Semi-Supervised-Training" class="headerlink" title="Clustering-guided Semi-Supervised Training"></a>Clustering-guided Semi-Supervised Training</h2><p>we employ the unsupervised clustering algorithm on $f_t$ to generate $N_g$ groups. Then, we randomly sample a single image from each group to form a very small sub-dataset $X_g$ with $N_g$ images. Next, we label this small sub-dataset manually and perform labels assignment based on this annotation.<br>Specifically, we extract features of all images in sub-dataset $X_g$ and obtain three feature vector sets $f_g$ $f_{g-up}$ $f_{g-low}$ and treat each of them as an identity dictionary. Given an unlabeled image $x_t^i$, we find the most similar images from $X_g$ by different cues, whole bodies, upper parts and lower parts, and assign $x_t^i$ with corresponding labels:<br>Note that we employ the k-reciprocal encoding as the distance metric for similarity measurement.<br><img src="/download/16.png"><br><img src="/download/18.png"></p>
+<h2 id="SSG"><a href="#SSG" class="headerlink" title="SSG++"></a>SSG++</h2><p><img src="/download/15.png"><br><img src="/download/19.png"></p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</title>
+    <url>/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S003132031930473X">Unsupervised domain adaptive re-identification: Theory and practice</a><br><a href="https://github.com/LcDog/DomainAdaptiveReID">https://github.com/LcDog/DomainAdaptiveReID</a><br>Liangchen Song, Cheng Wang, Lefei Zhang, et al.<br>Wuhan University, Horizon Robotics, Huazhong University of Science and Technology.</p>
+</blockquote>
+<h2 id="将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。"><a href="#将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。" class="headerlink" title="将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。"></a>将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。<br><span id="more"></span></h2><h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><p><img src="/download/1.png"></p>
+<blockquote>
+<p>In the context of re-ID tasks, two questions are of concern:<br>1.Under what conditions are unsupervised domain adaptive re-ID tasks DA-learnable?<br>2.How does the theoretical conditions help practical algorithms?</p>
+</blockquote>
+<p>对于问题1，根据论文[1]对分类任务做的3个假设，提出re-ID中的3个假设：</p>
+<ol>
+<li><strong>covariate assumption</strong>: the criteria of classifying feature pairs is the same between two domains;</li>
+<li><strong>Separately Probabilistic Lipschitzness</strong>: the feature pairs can be divided into clusters;</li>
+<li><strong>weight ratio</strong>: concerning the probability of existing a repeated feature among all the features from the two domains.</li>
+</ol>
+<p>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</p>
+<p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.</p>
+<p>根据上述假设, we propose several loss functions on the encoder and samples with guessed label. And the problem of selecting which sample with guessed label to train is optimized by minimizing the proposed loss functions.<br>For the Separately Probabilistic Lipschitzness assumption, we wish to minimize the intra-cluster and maximize inter-cluster distance. Then the sample selecting problem is turned into <strong>data clustering</strong> problem and minimizing loss functions is transformed into finding a <strong>distance metric</strong> for the data.<br>Further, another metric for Weight Ratio is designed.<br>After combining the two metrics together, we end up with a distance evaluating the confidence of the guessed labels.<br>Finally, the DBSCAN clustering method is employed to generate data clusters according to a threshold on the distance. With pseudo-labels on selected data cluster from target domain, the encoder is trained with triplet loss.</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br><img src="/download/3.png"><br>假设2和3最后实现时转变成设计distance metric，用k-reciprocal encoding计算距离，再用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
+<p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PyTorch相关</title>
+    <url>/2020/11/09/PyTorch%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>记录模块torch.nn.Parameter、torch.nn.Module、torch.autograd.Function，和常见的函数。</p>
+<span id="more"></span>
+<h2 id="torch-nn-Parameter和torch-nn-Module"><a href="#torch-nn-Parameter和torch-nn-Module" class="headerlink" title="torch.nn.Parameter和torch.nn.Module"></a>torch.nn.Parameter和torch.nn.Module</h2><h3 id="Parameter和Module的官方说明"><a href="#Parameter和Module的官方说明" class="headerlink" title="Parameter和Module的官方说明"></a>Parameter和Module的官方说明</h3><p><strong>torch.nn.Parameter:</strong><br>Arguments: data&#x3D;None, requires_grad&#x3D;True.</p>
+<p><strong>torch.nn.Module:</strong><br><code>double()</code> <code>float()</code> <code>half()</code> Casts all floating point parameters and buffers to double&#x2F;float&#x2F;half datatype.<br><code>type(dst_type)</code> Casts all parameters and buffers to dst_type.</p>
+<p><code>cpu()</code> <code>cuda(device=None)</code> Moves all model parameters and buffers to the CPU&#x2F;GPU.</p>
+<p><code>eval()</code> <code>train(mode=True)</code> Sets the module in evaluation&#x2F;training mode.</p>
+<p><code>add_module(name, module)</code> Adds a child module to the current module. The module can be accessed as an attribute using the given name.</p>
+<p><code>apply(fn)</code> Applies fn recursively to every submodule (as returned by .children()) as well as self.</p>
+<p><code>extra_repr()</code> Set the extra representation of the module. To print customized extra information, you should reimplement this method in your own modules. Both single-line and multi-line strings are acceptable.</p>
+<p><code>forward(*input)</code> Defines the computation performed at every call.</p>
+<p><code>register_backward_hook(hook)</code> Registers a backward hook on the module. The hook will be called every time the gradients with respect to module inputs are computed.<br><code>register_forward_hook(hook)</code> Registers a forward hook on the module. The hook will be called every time after <code>forward()</code> has computed an output.<br><code>register_forward_pre_hook(hook)</code> Registers a forward pre-hook on the module. The hook will be called every time before <code>forward()</code> is invoked.</p>
+<p><code>requires_grad_(requires_grad=True)</code> Change if autograd should record operations on parameters in this module. This method sets the parameters’ requires_grad attributes in-place.</p>
+<p><code>to(*args, **kwargs)</code> Moves and&#x2F;or casts the parameters and buffers.</p>
+<p><code>zero_grad()</code> Sets gradients of all model parameters to zero.</p>
+<p><code>buffers(recurse=True)</code> Returns an <strong>iterator</strong> over module buffers.<br><code>parameters(recurse=True)</code> Returns an <strong>iterator</strong> over module parameters.<br><code>named_buffers(prefix=&#39;&#39;, recurse=True)</code> Returns an <strong>iterator</strong> over module buffers, yielding both the name of the buffer as well as the buffer itself.<br><code>named_parameters(prefix=&#39;&#39;, recurse=True)</code> Returns an <strong>iterator</strong> over module parameters, yielding both the name of the parameter as well as the parameter itself.<br><code>register_buffer(name, tensor)</code> Adds a persistent buffer to the module. This is typically used to register a buffer that should not to be considered a model parameter. Buffers can be accessed as attributes using given names.<br><code>register_parameter(name, param)</code> Adds a parameter to the module. The parameter can be accessed as an attribute using given name.<br><code>load_state_dict(state_dict, strict=True)</code> Copies parameters and buffers from state_dict into this module and its descendants. If strict is True, then the keys of state_dict must exactly match the keys returned by this module’s state_dict() function.<br><code>state_dict(destination=None, prefix=&#39;&#39;, keep_vars=False)</code> Returns a <strong>dictionary</strong> containing a whole state of the module. Both parameters and persistent buffers (e.g. running averages) are included. Keys are corresponding parameter and buffer names.</p>
+<p><code>children()</code> Returns an <strong>iterator</strong> over immediate children modules.<br><code>modules()</code> Returns an <strong>iterator</strong> over all modules in the network. Duplicate modules are returned only once.<br><code>named_children()</code> Returns an <strong>iterator</strong> over immediate children modules, yielding both the name of the module as well as the module itself.<br><code>named_modules(memo=None, prefix=&#39;&#39;)</code> Returns an <strong>iterator</strong> over all modules in the network, yielding both the name of the module as well as the module itself. Duplicate modules are returned only once.</p>
+<h3 id="Module中的parameters和buffers和state-dict"><a href="#Module中的parameters和buffers和state-dict" class="headerlink" title="Module中的parameters和buffers和state_dict"></a>Module中的parameters和buffers和state_dict</h3><p><a href="https://zhuanlan.zhihu.com/p/89442276">Pytorch模型中的parameter与buffer</a><br><em>parameter</em> 反向传播需要被optimizer更新, 通过<code>model.parameters()</code>返回；<em>buffer</em> 反向传播不需要被optimizer更新，通过<code>model.buffers()</code>返回。<br>创建parameter：<br>(1) 直接将模型的成员变量(self.xxx)通过<code>nn.Parameter()</code>创建，会自动注册到parameters中，并且这样创建的参数会自动保存到state_dict中；<br>(2) 通过<code>nn.Parameter()</code>创建普通Parameter对象，不作为模型的成员变量，然后将Parameter对象通过<code>register_parameter()</code>进行注册，注册后的参数也会自动保存到state_dict中。<br>创建buffer：<br>需要创建tensor，然后将tensor通过<code>register_buffer()</code>进行注册，注册完后参数也会自动保存到state_dict中去。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyModel</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(MyModel, self).__init__()</span><br><span class="line">        buffer = torch.randn(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">        self.register_buffer(<span class="string">&#x27;my_buffer&#x27;</span>, buffer)</span><br><span class="line">        self.param1 = nn.Parameter(torch.randn(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">        param = nn.Parameter(torch.randn(<span class="number">2</span>, <span class="number">1</span>))</span><br><span class="line">        self.register_parameter(<span class="string">&quot;param2&quot;</span>, param)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    model = MyModel()</span><br><span class="line">    <span class="keyword">for</span> param <span class="keyword">in</span> model.parameters():</span><br><span class="line">        <span class="built_in">print</span>(param)  <span class="comment"># &lt;class &#x27;torch.nn.parameter.Parameter&#x27;&gt;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_parameters():</span><br><span class="line">        <span class="built_in">print</span>(tup)  <span class="comment"># &lt;class &#x27;tuple&#x27;&gt;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> buffer <span class="keyword">in</span> model.buffers():</span><br><span class="line">        <span class="built_in">print</span>(buffer)  <span class="comment"># &lt;class &#x27;torch.Tensor&#x27;&gt;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_buffers():</span><br><span class="line">        <span class="built_in">print</span>(tup)  <span class="comment"># &lt;class &#x27;tuple&#x27;&gt;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(model.state_dict())  <span class="comment"># &lt;class &#x27;collections.OrderedDict&#x27;&gt;</span></span><br><span class="line"><span class="comment">##</span></span><br><span class="line">Parameter containing:</span><br><span class="line">tensor([[-<span class="number">0.9896</span>, -<span class="number">1.9619</span>]], requires_grad=<span class="literal">True</span>)</span><br><span class="line">Parameter containing:</span><br><span class="line">tensor([[-<span class="number">1.6176</span>],</span><br><span class="line">        [-<span class="number">0.1562</span>]], requires_grad=<span class="literal">True</span>)</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;param1&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[-<span class="number">0.9896</span>, -<span class="number">1.9619</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;param2&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[-<span class="number">1.6176</span>],</span><br><span class="line">        [-<span class="number">0.1562</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">----------------</span><br><span class="line">tensor([[-<span class="number">1.3587</span>, -<span class="number">0.4721</span>, -<span class="number">0.7553</span>],</span><br><span class="line">        [ <span class="number">0.5493</span>,  <span class="number">0.8100</span>,  <span class="number">1.4646</span>]])</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;my_buffer&#x27;</span>, tensor([[-<span class="number">1.3587</span>, -<span class="number">0.4721</span>, -<span class="number">0.7553</span>],</span><br><span class="line">        [ <span class="number">0.5493</span>,  <span class="number">0.8100</span>,  <span class="number">1.4646</span>]]))</span><br><span class="line">----------------</span><br><span class="line">OrderedDict([(<span class="string">&#x27;param1&#x27;</span>, tensor([[-<span class="number">0.9896</span>, -<span class="number">1.9619</span>]])), (<span class="string">&#x27;param2&#x27;</span>, tensor([[-<span class="number">1.6176</span>],</span><br><span class="line">        [-<span class="number">0.1562</span>]])), (<span class="string">&#x27;my_buffer&#x27;</span>, tensor([[-<span class="number">1.3587</span>, -<span class="number">0.4721</span>, -<span class="number">0.7553</span>],</span><br><span class="line">        [ <span class="number">0.5493</span>,  <span class="number">0.8100</span>,  <span class="number">1.4646</span>]]))])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 模型保存和加载</span></span><br><span class="line">torch.save(model.state_dict(), PATH)</span><br><span class="line">model.load_state_dict(torch.load(PATH)</span><br></pre></td></tr></table></figure>
+<h3 id="Module中的children和modules"><a href="#Module中的children和modules" class="headerlink" title="Module中的children和modules"></a>Module中的children和modules</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyModel</span>(nn.Module):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">super</span>(MyModel, self).__init__()</span><br><span class="line">        self.lin1 = nn.Linear(<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">        self.lin2 = nn.Sequential(nn.Linear(<span class="number">1</span>, <span class="number">2</span>), nn.Linear(<span class="number">2</span>, <span class="number">1</span>))</span><br><span class="line">        lin = nn.Linear(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">        self.lin3 = nn.Sequential(lin, lin)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    model = MyModel()</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_children():</span><br><span class="line">        <span class="built_in">print</span>(tup)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_modules():</span><br><span class="line">        <span class="built_in">print</span>(tup)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> tup <span class="keyword">in</span> model.named_parameters():</span><br><span class="line">        <span class="built_in">print</span>(tup)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;----------------&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(model.state_dict())</span><br><span class="line"><span class="comment">##</span></span><br><span class="line">(<span class="string">&#x27;lin1&#x27;</span>, Linear(in_features=<span class="number">1</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin3&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;&#x27;</span>, MyModel(</span><br><span class="line">  (lin1): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (lin2): Sequential(</span><br><span class="line">    (<span class="number">0</span>): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">    (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  )</span><br><span class="line">  (lin3): Sequential(</span><br><span class="line">    (<span class="number">0</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">    (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  )</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin1&#x27;</span>, Linear(in_features=<span class="number">1</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin2.0&#x27;</span>, Linear(in_features=<span class="number">1</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.1&#x27;</span>, Linear(in_features=<span class="number">2</span>, out_features=<span class="number">1</span>, bias=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin3&#x27;</span>, Sequential(</span><br><span class="line">  (<span class="number">0</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">  (<span class="number">1</span>): Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>)</span><br><span class="line">))</span><br><span class="line">(<span class="string">&#x27;lin3.0&#x27;</span>, Linear(in_features=<span class="number">2</span>, out_features=<span class="number">2</span>, bias=<span class="literal">True</span>))</span><br><span class="line">----------------</span><br><span class="line">(<span class="string">&#x27;lin1.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">0.2448</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin1.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([-<span class="number">0.7488</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.0.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[<span class="number">0.4151</span>],</span><br><span class="line">        [<span class="number">0.9873</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.0.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([-<span class="number">0.0301</span>,  <span class="number">0.3848</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.1.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[ <span class="number">0.4902</span>, -<span class="number">0.4937</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin2.1.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([<span class="number">0.2317</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin3.0.weight&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([[-<span class="number">0.6023</span>, -<span class="number">0.2234</span>],</span><br><span class="line">        [ <span class="number">0.4948</span>,  <span class="number">0.4749</span>]], requires_grad=<span class="literal">True</span>))</span><br><span class="line">(<span class="string">&#x27;lin3.0.bias&#x27;</span>, Parameter containing:</span><br><span class="line">tensor([ <span class="number">0.2648</span>, -<span class="number">0.4021</span>], requires_grad=<span class="literal">True</span>))</span><br><span class="line">----------------</span><br><span class="line">OrderedDict([(<span class="string">&#x27;lin1.weight&#x27;</span>, tensor([[<span class="number">0.2448</span>]])), (<span class="string">&#x27;lin1.bias&#x27;</span>, tensor([-<span class="number">0.7488</span>])), (<span class="string">&#x27;lin2.0.weight&#x27;</span>, tensor([[<span class="number">0.4151</span>],</span><br><span class="line">        [<span class="number">0.9873</span>]])), (<span class="string">&#x27;lin2.0.bias&#x27;</span>, tensor([-<span class="number">0.0301</span>,  <span class="number">0.3848</span>])), (<span class="string">&#x27;lin2.1.weight&#x27;</span>, tensor([[ <span class="number">0.4902</span>, -<span class="number">0.4937</span>]])), (<span class="string">&#x27;lin2.1.bias&#x27;</span>, tensor([<span class="number">0.2317</span>])), (<span class="string">&#x27;lin3.0.weight&#x27;</span>, tensor([[-<span class="number">0.6023</span>, -<span class="number">0.2234</span>],</span><br><span class="line">        [ <span class="number">0.4948</span>,  <span class="number">0.4749</span>]])), (<span class="string">&#x27;lin3.0.bias&#x27;</span>, tensor([ <span class="number">0.2648</span>, -<span class="number">0.4021</span>])), (<span class="string">&#x27;lin3.1.weight&#x27;</span>, tensor([[-<span class="number">0.6023</span>, -<span class="number">0.2234</span>],</span><br><span class="line">        [ <span class="number">0.4948</span>,  <span class="number">0.4749</span>]])), (<span class="string">&#x27;lin3.1.bias&#x27;</span>, tensor([ <span class="number">0.2648</span>, -<span class="number">0.4021</span>]))])</span><br></pre></td></tr></table></figure>
+<h2 id="torch-autograd-Function"><a href="#torch-autograd-Function" class="headerlink" title="torch.autograd.Function"></a>torch.autograd.Function</h2><p><a href="https://pytorch.org/docs/1.3.1/notes/extending.html">EXTENDING PYTORCH</a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 示例</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Exp</span>(<span class="title class_ inherited__">Function</span>):</span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">ctx, i</span>):</span><br><span class="line">        result = i.exp()</span><br><span class="line">        ctx.save_for_backward(result)</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">backward</span>(<span class="params">ctx, grad_output</span>):</span><br><span class="line">        result, = ctx.saved_tensors</span><br><span class="line">        <span class="keyword">return</span> grad_output * result</span><br><span class="line"><span class="comment"># To make it easier to use these custom ops, we recommend aliasing their apply method.</span></span><br><span class="line">exp = Exp.apply</span><br></pre></td></tr></table></figure>
+<p><code>STATIC backward(ctx, *grad_outputs)</code> It must accept a context ctx as the first argument, followed by as many outputs did <code>forward()</code> return, and it should return as many tensors, as there were inputs to <code>forward()</code>. Each argument is the gradient w.r.t the given output, and each returned value should be the gradient w.r.t. the corresponding input.<br>The context can be used to retrieve tensors saved during the forward pass. It also has an attribute <code>ctx.needs_input_grad</code> as a tuple of booleans representing whether each input needs gradient. E.g., <code>backward()</code> will have <code>ctx.needs_input_grad[0] = True</code> if the first input to <code>forward()</code> needs gradient computated w.r.t. the output.</p>
+<p><code>STATIC forward(ctx, *args, **kwargs)</code> It must accept a context ctx as the first argument, followed by any number of arguments (tensors or other types). The context can be used to store tensors that can be then retrieved during the backward pass.</p>
+<h2 id="torch-Tensor"><a href="#torch-Tensor" class="headerlink" title="torch.Tensor"></a>torch.Tensor</h2><p>torch.Tensor: class, is an alias for the default tensor type (torch.FloatTensor). A tensor can be constructed from a Python list or sequence using the torch.tensor() constructor:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">torch.tensor([[<span class="number">1.</span>, -<span class="number">1.</span>], [<span class="number">1.</span>, -<span class="number">1.</span>]])</span><br><span class="line">torch.tensor(np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]]))</span><br></pre></td></tr></table></figure>
+<h3 id="item"><a href="#item" class="headerlink" title="item()"></a>item()</h3><p><code>x.item()</code> Returns the value of this tensor as a standard Python number. This only works for tensors with one element. This operation is not differentiable.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = torch.tensor([[<span class="number">1</span>]])</span><br><span class="line">x  <span class="comment"># tensor([[1]])</span></span><br><span class="line">x.item()  <span class="comment"># 1</span></span><br></pre></td></tr></table></figure>
+<h3 id="clone-和detach"><a href="#clone-和detach" class="headerlink" title="clone()和detach()"></a>clone()和detach()</h3><p><code>x.clone()</code> Returns a copy of the self tensor. The copy has the same size and data type as self. Unlike <code>copy_()</code>, this function is <strong>recorded in the computation graph</strong>. Gradients propagating to the cloned tensor will propagate to the original tensor. 开辟新的内存。<br><code>x.detach()</code> Returns a new Tensor, detached from the current graph. The result will <strong>never require gradient</strong>. Returned Tensor <strong>shares the same storage</strong> with the original one.<br><a href="https://blog.csdn.net/guofei_fly/article/details/104486708">【Pytorch】对比clone、detach以及copy_等张量复制操作</a></p>
+<h3 id="contiguous"><a href="#contiguous" class="headerlink" title="contiguous()"></a>contiguous()</h3><p>Returns a contiguous tensor containing the same data as self tensor. If self tensor is contiguous, this function returns the self tensor.<br><a href="https://zhuanlan.zhihu.com/p/64551412">PyTorch中的contiguous</a></p>
+<h3 id="index-add-dim-index-tensor-→-Tensor"><a href="#index-add-dim-index-tensor-→-Tensor" class="headerlink" title="index_add_(dim, index, tensor) → Tensor"></a>index_add_(dim, index, tensor) → Tensor</h3><p>Accumulate the elements of <code>tensor</code> into the self tensor by adding to the indices in the order given in <code>index</code>.<br>For example, if <code>dim == 0</code> and <code>index[i] == j</code>, then the <code>i</code> th row of tensor is added to the <code>j</code> th row of self.<br><strong>dim</strong>: int, dimension along which to index.<br><strong>index</strong>: LongTensor, indices of tensor to select from.<br><strong>tensor</strong>: Tensor, the tensor containing values to add.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = torch.ones(<span class="number">5</span>, <span class="number">3</span>)</span><br><span class="line">t = torch.tensor([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]], dtype=torch.<span class="built_in">float</span>)</span><br><span class="line">index = torch.tensor([<span class="number">0</span>, <span class="number">4</span>, <span class="number">2</span>])</span><br><span class="line">x.index_add_(<span class="number">0</span>, index, t)</span><br><span class="line"><span class="comment"># tensor([[  2.,   3.,   4.],</span></span><br><span class="line"><span class="comment">#         [  1.,   1.,   1.],</span></span><br><span class="line"><span class="comment">#         [  8.,   9.,  10.],</span></span><br><span class="line"><span class="comment">#         [  1.,   1.,   1.],</span></span><br><span class="line"><span class="comment">#         [  5.,   6.,   7.]])</span></span><br></pre></td></tr></table></figure>
+<h2 id="torchvision-transforms"><a href="#torchvision-transforms" class="headerlink" title="torchvision.transforms"></a>torchvision.transforms</h2><p>Transforms on PIL Image: 输入为PIL Image，输出也为PIL Image。</p>
+<p><strong>torchvision.transforms.ToTensor</strong>: Convert a PIL Image or numpy.ndarray to tensor.<br>Converts a <strong>PIL Image</strong> or <strong>numpy.ndarray (H x W x C) in the range [0, 255]</strong> to a <strong>torch.FloatTensor of shape (C x H x W) in the range [0.0, 1.0]</strong> if the PIL Image belongs to one of the modes (L, LA, P, I, F, RGB, YCbCr, RGBA, CMYK, 1) or if the numpy.ndarray has dtype &#x3D; np.uint8.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># PIL.Image读的图片为 W*H，通道为 RGB</span></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"></span><br><span class="line">im = Image.<span class="built_in">open</span>(fpath).convert(<span class="string">&#x27;RGB&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(im.size)  <span class="comment"># (w, h)</span></span><br><span class="line"><span class="built_in">print</span>(im.mode)  <span class="comment"># &#x27;RGB&#x27;</span></span><br><span class="line">a = np.asarray(im)</span><br><span class="line"><span class="built_in">print</span>(a.shape)  <span class="comment"># (h, w, c)</span></span><br><span class="line">im = Image.fromarray(a)</span><br><span class="line"></span><br><span class="line"><span class="comment"># opencv读的图片为 H*W，通道为 BGR</span></span><br><span class="line">im = cv2.imread(fpath, cv2.IMREAD_COLOR)</span><br><span class="line"><span class="built_in">print</span>(im.shape)  <span class="comment"># (h, w, c)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># a的通道为 RGB，im的通道为 BGR</span></span><br></pre></td></tr></table></figure>
+<h2 id="Loss-functions"><a href="#Loss-functions" class="headerlink" title="Loss functions"></a>Loss functions</h2><h3 id="NLLLoss"><a href="#NLLLoss" class="headerlink" title="NLLLoss"></a>NLLLoss</h3><p>CLASS: <code>torch.nn.NLLLoss(weight=None, size_average=None, ignore_index=-100, reduce=None, reduction=&#39;mean&#39;)</code><br>FUNCTION: <code>torch.nn.functional.nll_loss(input, target, weight=None, size_average=None, ignore_index=-100, reduce=None, reduction=&#39;mean&#39;)</code><br>The negative log likelihood loss. It is useful to train a classification problem with C classes.</p>
+<p><strong>size_average</strong>: Deprecated.<br><strong>reduce</strong>: Deprecated.<br><strong>weight</strong>: a manual rescaling weight given to each class. If given, it has to be a Tensor of size $C$. Otherwise, it is treated as if having all ones. This is particularly useful when you have an unbalanced training set.<br><strong>ignore_index</strong>: Specifies a target value that is ignored and does not contribute to the input gradient. When <code>reduction=&#39;mean&#39;</code>, the loss is averaged over non-ignored targets.<br><strong>reduction</strong>: Specifies the reduction to apply to the output: <code>&#39;none&#39; | &#39;mean&#39; | &#39;sum&#39;</code>.</p>
+<p><em><strong>input</strong></em>: log-probabilities of each class, Tensor of size either $(N,C)$ or $(N,C,d_1,d_2,\ldots,d_K)$ with $K\geq1$ for the K-dimensional case.<br>Obtaining log-probabilities in a neural network is easily achieved by adding a <em>LogSoftmax</em> layer in the last layer of your network. You may use <em>CrossEntropyLoss</em> instead, if you prefer not to add an extra layer.<br><em><strong>target</strong></em>: class index in the range $[0,C-1]$; if <em>ignore_index</em> is specified, this loss also accepts this class index (this index may not necessarily be in the class range). Tensor of size either $(N)$ or $(N,d_1,d_2,\ldots,d_K)$ with $K\geq1$ for the K-dimensional case.<br><em><strong>Output</strong></em>: scalar. If reduction is ‘none’, then the same size as the target: $(N)$ or $(N,d_1,d_2,\ldots,d_K)$ with $K\geq1$ for the K-dimensional case.</p>
+<p><code>reduction=&#39;none&#39;</code>, loss:<br><img src="/download/20.png"><br><code>reduction=&#39;mean&#39;</code>or <code>reduction=&#39;sum&#39;</code>, loss:<br><img src="/download/21.png"><br>In the K-dimensional case, it computes NLL loss per-pixel.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"></span><br><span class="line"><span class="built_in">input</span> = torch.randn(<span class="number">3</span>, <span class="number">5</span>, requires_grad=<span class="literal">True</span>)</span><br><span class="line"><span class="built_in">print</span>(F.log_softmax(<span class="built_in">input</span>, dim=<span class="number">1</span>))</span><br><span class="line"><span class="comment"># tensor([[-1.1773, -3.1962, -2.5500, -0.9069, -1.7771],</span></span><br><span class="line"><span class="comment">#         [-1.0217, -1.2633, -1.9184, -2.0835, -2.4538],</span></span><br><span class="line"><span class="comment">#         [-3.0267, -2.3012, -2.4655, -0.6980, -1.3137]],</span></span><br><span class="line"><span class="comment">#        grad_fn=&lt;LogSoftmaxBackward&gt;)</span></span><br><span class="line">target = torch.tensor([<span class="number">1</span>, <span class="number">0</span>, <span class="number">4</span>])</span><br><span class="line">output = F.nll_loss(F.log_softmax(<span class="built_in">input</span>, dim=<span class="number">1</span>), target, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([3.1962, 1.0217, 1.3137], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(<span class="built_in">input</span>, dim=<span class="number">1</span>), target)</span><br><span class="line"><span class="comment"># tensor(1.8439, grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(<span class="built_in">input</span>, dim=<span class="number">1</span>), target, weight=torch.tensor([<span class="number">1.</span>,<span class="number">2.</span>,<span class="number">3.</span>,<span class="number">4.</span>,<span class="number">5.</span>]), reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([6.3925, 1.0217, 6.5687], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(<span class="built_in">input</span>, dim=<span class="number">1</span>), target, ignore_index=<span class="number">4</span>, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([3.1962, 1.0217, 0.0000], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">target = torch.tensor([<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>])</span><br><span class="line">output = F.nll_loss(F.log_softmax(<span class="built_in">input</span>, dim=<span class="number">1</span>), target, ignore_index=-<span class="number">1</span>, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([3.1962, 0.0000, 0.0000], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(<span class="built_in">input</span>, dim=<span class="number">1</span>), target, weight=torch.tensor([<span class="number">1.</span>,<span class="number">2.</span>,<span class="number">3.</span>,<span class="number">4.</span>,<span class="number">5.</span>]), ignore_index=-<span class="number">1</span>, reduction=<span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"><span class="comment"># tensor([6.3925, 0.0000, 0.0000], grad_fn=&lt;NllLossBackward&gt;)</span></span><br><span class="line">output = F.nll_loss(F.log_softmax(<span class="built_in">input</span>, dim=<span class="number">1</span>), target, ignore_index=-<span class="number">1</span>)</span><br><span class="line"><span class="comment"># tensor(3.1962, grad_fn=&lt;NllLossBackward&gt;)</span></span><br></pre></td></tr></table></figure>
+<h3 id="CrossEntropyLoss"><a href="#CrossEntropyLoss" class="headerlink" title="CrossEntropyLoss"></a>CrossEntropyLoss</h3><p>CLASS: <code>torch.nn.CrossEntropyLoss(weight=None, size_average=None, ignore_index=-100, reduce=None, reduction=&#39;mean&#39;)</code><br>This criterion combines <code>nn.LogSoftmax()</code> and <code>nn.NLLLoss()</code> in one single class.<br>The <em>input</em> is expected to contain raw, unnormalized scores for each class.<br><img src="/download/25.png"><br><img src="/download/26.png"></p>
+<h3 id="BCEWithLogitsLoss"><a href="#BCEWithLogitsLoss" class="headerlink" title="BCEWithLogitsLoss"></a>BCEWithLogitsLoss</h3><p>CLASS: <code>torch.nn.BCEWithLogitsLoss(weight=None, size_average=None, reduce=None, reduction=&#39;mean&#39;, pos_weight=None)</code><br>This loss combines a <em>Sigmoid</em> layer and the <em>BCELoss</em> in one single class.</p>
+<p><strong>size_average</strong>: Deprecated.<br><strong>reduce</strong>: Deprecated.<br><strong>weight</strong>: a manual rescaling weight given to the loss of each batch element. If given, has to be a Tensor of size nbatch.<br><strong>reduction</strong>: Specifies the reduction to apply to the output: <code>&#39;none&#39; | &#39;mean&#39; | &#39;sum&#39;</code>.<br><strong>pos_weight</strong>: a weight of positive examples. Must be a vector with length equal to the number of classes.</p>
+<p><em><strong>Input</strong></em>: (N, #).<br><em><strong>target</strong></em>: (N, #), numbers between 0 and 1.<br><em><strong>Output</strong></em>: scalar. If reduction is ‘none’, then (N, #), same shape as input.</p>
+<p><code>reduction=&#39;none&#39;</code>, loss:<br><img src="/download/22.png"><br><code>reduction=&#39;mean&#39;</code>or <code>reduction=&#39;sum&#39;</code>, loss:<br><img src="/download/23.png"><br>It’s possible to trade off recall and precision by adding weights to positive examples. multi-label classification:<br><img src="/download/24.png"></p>
+<h2 id="torch-nn-functional"><a href="#torch-nn-functional" class="headerlink" title="torch.nn.functional"></a>torch.nn.functional</h2><p><code>torch.nn.functional.normalize(input, p=2, dim=1, eps=1e-12, out=None)</code><br>Performs $L_p$ normalization of inputs over specified dimension.<br>$$<br>v&#x3D;\frac{v}{\max(||v||_p, \epsilon)}<br>$$</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"></span><br><span class="line">a = torch.tensor([[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>]], dtype=torch.<span class="built_in">float</span>)</span><br><span class="line">a = F.normalize(a)</span><br><span class="line"><span class="comment"># tensor([[0.5774, 0.5774, 0.5774],</span></span><br><span class="line"><span class="comment">#         [0.3333, 0.6667, 0.6667]])</span></span><br></pre></td></tr></table></figure>
+<p><code>x.norm(p=&#39;fro&#39;, dim=None, keepdim=False, dtype=None)</code><br><code>torch.norm(input, p=&#39;fro&#39;, dim=None, keepdim=False, out=None, dtype=None)</code><br>Returns the matrix norm or vector norm of a given tensor.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = torch.tensor([<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>], dtype=torch.<span class="built_in">float</span>)</span><br><span class="line">a.norm()  <span class="comment"># tensor(3.)</span></span><br><span class="line">a / a.norm()  <span class="comment"># tensor([0.3333, 0.6667, 0.6667])</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>PyTorch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>re-ID 相关</title>
+    <url>/2020/11/05/re-ID%E7%9B%B8%E5%85%B3/</url>
+    <content><![CDATA[<p>行人属性数据集：<a href="https://www.datafountain.cn/competitions/235">监控场景下的行人精细化识别</a></p>
+<p><a href="https://john-yao.github.io/2019/09/18/Reranking/?tdsourcetag=s_pctim_aiomsg">Reranking</a></p>
+<span id="more"></span>
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><table>
+<thead>
+<tr>
+<th align="center">Market-1501</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">12936</td>
+<td align="center">751</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">3368</td>
+<td align="center">750</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">15913&#x2F;19732</td>
+<td align="center">750+1</td>
+<td align="center">6</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">DukeMTMC-reID</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">16522</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">2228</td>
+<td align="center">702</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">17661</td>
+<td align="center">702+408</td>
+<td align="center">8</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">MSMT17_V1</th>
+<th align="center">images</th>
+<th align="center">ids</th>
+<th align="center">cameras</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">train</td>
+<td align="center">30248</td>
+<td align="center">1041</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">query</td>
+<td align="center">11659</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+<tr>
+<td align="center">gallery</td>
+<td align="center">82161</td>
+<td align="center">3060</td>
+<td align="center">15</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>re-ID</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
+    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
+</blockquote>
+<h2 id="相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering-and-Fine-tuning。提出Progressive-Unsupervised-Learning-PUL-方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced-learning的思路选择可靠的样本进行训练。"><a href="#相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering-and-Fine-tuning。提出Progressive-Unsupervised-Learning-PUL-方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced-learning的思路选择可靠的样本进行训练。" class="headerlink" title="相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。"></a>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。<br><span id="more"></span></h2><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
+<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
+<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
+</blockquote>
+<p><img src="/download/12.png"></p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tmux 使用</title>
+    <url>/2020/11/27/tmux%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>参考：<a href="https://www.cnblogs.com/wangqiguo/p/8905081.html">tmux 终端复用详解</a>，<a href="https://www.cnblogs.com/kevingrace/p/6496899.html">Linux终端复用神器-Tmux使用梳理</a>，<a href="https://blog.csdn.net/Hungryof/article/details/90266682">Windows下用Git Bash安装tmux</a><br>记录tmux常用命令。</p>
+<span id="more"></span>
+<table>
+<thead>
+<tr>
+<th align="center">终端命令</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>tmux new -s 会话名</strong></td>
+<td align="center">新建某个会话</td>
+</tr>
+<tr>
+<td align="center"><strong>tmux ls</strong></td>
+<td align="center">终端环境查看会话列表</td>
+</tr>
+<tr>
+<td align="center"><strong>tmux a -t 会话名</strong></td>
+<td align="center">从终端环境进入某个会话</td>
+</tr>
+<tr>
+<td align="center"><strong>tmux kill-session -t 会话名</strong></td>
+<td align="center">销毁会话</td>
+</tr>
+<tr>
+<td align="center">tmux rename -t 旧会话名 新会话名</td>
+<td align="center">重命名会话</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">会话操作</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>ctrl+b d</strong></td>
+<td align="center">退出会话，回到shell的终端环境</td>
+</tr>
+<tr>
+<td align="center">ctrl+b s</td>
+<td align="center">会话环境查看会话列表</td>
+</tr>
+<tr>
+<td align="center">ctrl+b :</td>
+<td align="center">黄色状态栏输入命令</td>
+</tr>
+<tr>
+<td align="center">ctrl+b ?</td>
+<td align="center">列出所有快捷键；按q返回</td>
+</tr>
+<tr>
+<td align="center">ctrl+b $</td>
+<td align="center">重命名会话（会话环境）</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">窗口操作</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ctrl+b ,</td>
+<td align="center">重命名当前窗口</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b c</strong></td>
+<td align="center">创建窗口</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b w</strong></td>
+<td align="center">查看当前会话的所有窗口</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b p</strong></td>
+<td align="center">切换到上一个窗口</td>
+</tr>
+<tr>
+<td align="center">ctrl+b n</td>
+<td align="center">切换到下一个窗口</td>
+</tr>
+<tr>
+<td align="center">ctrl+b 数字</td>
+<td align="center">切换到某个序号的窗口</td>
+</tr>
+<tr>
+<td align="center">ctrl+b l</td>
+<td align="center">在前后两个窗口间互相切换</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b &amp;</strong></td>
+<td align="center">关闭当前窗口</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">面板操作</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>ctrl+b %</strong></td>
+<td align="center">左右分屏</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b “</strong></td>
+<td align="center">上下分屏</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b x</strong></td>
+<td align="center">关闭当前面板</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b z</strong></td>
+<td align="center">最大化当前面板，再按一次后恢复</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b o</strong></td>
+<td align="center">在当前窗口中选择下一面板</td>
+</tr>
+<tr>
+<td align="center">ctrl+b 箭头方向</td>
+<td align="center">根据按箭方向选择切换到某个面板</td>
+</tr>
+<tr>
+<td align="center">ctrl+b 空格键</td>
+<td align="center">对当前窗口下的所有面板重新排列布局</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b !</strong></td>
+<td align="center">将当前面板置于新窗口；即新建一个窗口，其中仅包含当前面板</td>
+</tr>
+<tr>
+<td align="center"><strong>ctrl+b PgUp&#x2F;PgDn</strong></td>
+<td align="center">浏览历史输出，按q退出</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>tmux</category>
+      </categories>
+      <tags>
+        <tag>tmux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>分布式训练</title>
+    <url>/2022/04/02/%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%AD%E7%BB%83/</url>
+    <content><![CDATA[<p>三天半的清明假期开始啦！先来总结下PyTorch分布式训练相关的内容。<br>如<a href="https://pytorch.org/tutorials/intermediate/ddp_tutorial.html">GETTING STARTED WITH DISTRIBUTED DATA PARALLEL</a>，<strong>DistributedDataParallel</strong>(DDP)可以跨多台机器运行，实现数据并行。DDP使用torch.distributed包中的集体通信来同步梯度和buffer。<br>研究生的时候一直使用的是<strong>DataParallel</strong>，但是<strong>DistributedDataParallel</strong>的效率更高，主要区别如下：</p>
+<ul>
+<li>DataParallel是单进程、多线程，并且只在单机上工作，而DistributedDataParallel是多进程的，适用于单机和多机训练。</li>
+<li>由于跨线程的GIL争用、每次迭代的复制模型以及分散输入和收集输出引入的额外开销，即使在单台机器上，DataParallel通常也比DistributedDataParallel慢。</li>
+<li>DistributedDataParallel可以和<strong>model parallel</strong>一起使用，而DataParallel不可以。</li>
+</ul>
+<p>因此使用DistributedDataParallel是非常有必要的！</p>
+<span id="more"></span>
+
+<p>下面就来介绍一下使用方法（TCP初始化方式）</p>
+<h3 id="输入参数"><a href="#输入参数" class="headerlink" title="输入参数"></a>输入参数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">myargs</span>():</span><br><span class="line">    parser = argparse.ArgumentParser(description=<span class="string">&#x27;training example&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--batch_size&#x27;</span>, default=<span class="number">256</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;this is the total batch size of all GPUs on the current node when using Distributed Data Parallel&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--workers&#x27;</span>, default=<span class="number">8</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;number of data loading workers&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--epochs&#x27;</span>, default=<span class="number">100</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;number of total epochs to run&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--seed&#x27;</span>, default=<span class="number">20</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;seed for initializing training.&#x27;</span>)</span><br><span class="line">    <span class="comment"># 分布式训练相关</span></span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--dist_url&#x27;</span>, default=<span class="string">&#x27;tcp://127.0.0.1:23456&#x27;</span>, <span class="built_in">type</span>=<span class="built_in">str</span>, <span class="built_in">help</span>=<span class="string">&#x27;url used to set up distributed training&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--dist_backend&#x27;</span>, default=<span class="string">&#x27;nccl&#x27;</span>, <span class="built_in">type</span>=<span class="built_in">str</span>, <span class="built_in">help</span>=<span class="string">&#x27;distributed backend&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--world_size&#x27;</span>, default=<span class="number">1</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;number of nodes for distributed training&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--rank&#x27;</span>, default=<span class="number">0</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;node rank for distributed training&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--gpu&#x27;</span>, default=<span class="literal">None</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;GPU id to use.&#x27;</span>)</span><br><span class="line">    myargs = parser.parse_args()</span><br><span class="line">    <span class="keyword">return</span> myargs</span><br></pre></td></tr></table></figure>
+<p><code>batch_size</code>指一台机子上所有GPU的总batch_size；<code>dist_url</code>为主机的ip:port，port未被占用，当只有一台机子时，使用本机ip 127.0.0.1；<code>dist_backend</code>一般设置为nccl；<code>world_size</code>为使用的机器总数；<code>rank</code>为机器序号；<code>gpu</code>不需要指定，表示当前机子当前进程的局部rank号，torch.multiprocessing.spawn会自动将其传入main_worker函数。</p>
+<h3 id="运行样例"><a href="#运行样例" class="headerlink" title="运行样例"></a>运行样例</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 单机4GPU运行</span></span><br><span class="line">CUDA_VISIBLE_DEVICES=<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span> python xxx.py --dist-url <span class="string">&#x27;tcp://127.0.0.1:23456&#x27;</span> --dist-backend <span class="string">&#x27;nccl&#x27;</span> --world-size <span class="number">1</span> --rank <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多机运行</span></span><br><span class="line">CUDA_VISIBLE_DEVICES=<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span> python xxx.py --dist-url <span class="string">&#x27;tcp://IP_OF_NODE0:FREEPORT&#x27;</span> --dist-backend <span class="string">&#x27;nccl&#x27;</span> --world-size <span class="number">2</span> --rank <span class="number">0</span>  <span class="comment"># node 0</span></span><br><span class="line">CUDA_VISIBLE_DEVICES=<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span> python xxx.py --dist-url <span class="string">&#x27;tcp://IP_OF_NODE0:FREEPORT&#x27;</span> --dist-backend <span class="string">&#x27;nccl&#x27;</span> --world-size <span class="number">2</span> --rank <span class="number">1</span>  <span class="comment"># node 1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="训练代码"><a href="#训练代码" class="headerlink" title="训练代码"></a>训练代码</h3><ol>
+<li>主函数，通过spawn开启多个进程，一个进程一个GPU，传入main_worker函数的参数为（当前局部rank号可以视为GPU号，args）。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    args = myargs()</span><br><span class="line"></span><br><span class="line">    ngpus_per_node = torch.cuda.device_count()  <span class="comment"># 一个机子的GPU数</span></span><br><span class="line">    args.world_size = ngpus_per_node * args.world_size  <span class="comment"># 所有机子总的GPU数</span></span><br><span class="line">    torch.multiprocessing.spawn(main_worker, nprocs=ngpus_per_node, args=(ngpus_per_node, args))</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>main函数，每个进程都会执行</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main_worker</span>(<span class="params">gpu, ngpus_per_node, args</span>):</span><br><span class="line">    <span class="comment"># 这边设定随机种子，benchmark设定为False，原因？</span></span><br><span class="line">    random.seed(myargs.random_seed)</span><br><span class="line">    np.random.seed(myargs.random_seed)</span><br><span class="line">    torch.manual_seed(myargs.random_seed)</span><br><span class="line">    torch.cuda.manual_seed_all(myargs.random_seed)</span><br><span class="line">    torch.backends.cudnn.deterministic = <span class="literal">True</span></span><br><span class="line">    torch.backends.cudnn.benchmark = <span class="literal">False</span></span><br><span class="line">	</span><br><span class="line">    <span class="comment"># spawn传进来的局部rank号，即GPU号</span></span><br><span class="line">    args.gpu = gpu</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Use GPU: &#123;&#125; for distributed training&quot;</span>.<span class="built_in">format</span>(args.gpu))</span><br><span class="line">	</span><br><span class="line">    <span class="comment"># init_process_group需传入当前进程的全局rank号</span></span><br><span class="line">    args.rank = args.rank * ngpus_per_node + gpu  <span class="comment"># 全局rank</span></span><br><span class="line">    dist.init_process_group(backend=args.dist_backend, init_method=args.dist_url, world_size=args.world_size, rank=args.rank)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义模型，修改batch_size，num_workers</span></span><br><span class="line">    model = resnet50()</span><br><span class="line">    torch.cuda.set_device(args.gpu)  <span class="comment"># 设置device为当前gpu</span></span><br><span class="line">    model.cuda(args.gpu)</span><br><span class="line">    args.batch_size = <span class="built_in">int</span>(args.batch_size / ngpus_per_node)  <span class="comment"># 得到单个GPU上的batch_size</span></span><br><span class="line">    args.workers = <span class="built_in">int</span>((args.workers + ngpus_per_node - <span class="number">1</span>) / ngpus_per_node)</span><br><span class="line">    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义损失、optimizer、scheduler</span></span><br><span class="line">    criterion = torch.nn.CrossEntropyLoss().cuda(args.gpu)</span><br><span class="line">    optimizer = torch.optim.SGD(model.parameters(), <span class="number">0.1</span>, momentum=<span class="number">0.9</span>, weight_decay=<span class="number">1e-4</span>)</span><br><span class="line">    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=<span class="number">30</span>, gamma=<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 需定义数据sampler</span></span><br><span class="line">    train_sampler = torch.utils.data.distributed.DistributedSampler(train_dataset)</span><br><span class="line">    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=<span class="literal">False</span>, sampler=train_sampler, num_workers=args.workers, pin_memory=<span class="literal">True</span>, drop_last=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(args.epochs):</span><br><span class="line">        <span class="comment"># 保证每个进程拿到的数据不一样</span></span><br><span class="line">        train_sampler.set_epoch(epoch)</span><br><span class="line"></span><br><span class="line">        model.train()</span><br><span class="line">        <span class="keyword">for</span> i, (images, target) <span class="keyword">in</span> <span class="built_in">enumerate</span>(train_loader):</span><br><span class="line">            optimizer.zero_grad()</span><br><span class="line">            </span><br><span class="line">            images = images.cuda(args.gpu, non_blocking=<span class="literal">True</span>)</span><br><span class="line">            target = target.cuda(args.gpu, non_blocking=<span class="literal">True</span>)</span><br><span class="line">            output = model(images)</span><br><span class="line">            loss = criterion(output, target)</span><br><span class="line"></span><br><span class="line">            loss.backward()</span><br><span class="line">            optimizer.step()</span><br><span class="line"></span><br><span class="line">        scheduler.step()</span><br><span class="line">        <span class="keyword">if</span> args.rank % ngpus_per_node == <span class="number">0</span>:</span><br><span class="line">            torch.save(model.module.state_dict(), <span class="string">&#x27;checkpoint.pth.tar&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    torch.cuda.empty_cache()</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>PyTorch训练</category>
+      </categories>
+      <tags>
+        <tag>PyTorch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自动混合精度AMP</title>
+    <url>/2022/04/05/%E8%87%AA%E5%8A%A8%E6%B7%B7%E5%90%88%E7%B2%BE%E5%BA%A6AMP/</url>
+    <content><![CDATA[<p>上一篇总结了PyTorch，这一篇总结下自动混合精度AMP训练。<br>参考<a href="https://pytorch.org/docs/stable/amp.html?highlight=amp#module-torch.cuda.amp">AUTOMATIC MIXED PRECISION PACKAGE</a>，<a href="https://zhuanlan.zhihu.com/p/165152789">PyTorch的自动混合精度（AMP）</a>，<a href="https://zhuanlan.zhihu.com/p/348554267">PyTorch 源码解读之 torch.cuda.amp: 自动混合精度详解</a>。</p>
+<blockquote>
+<p>自动混合精度（Automatic Mixed Precision, AMP)训练，是在训练一个数值精度 FP32 的模型，一部分算子的操作时，数值精度为 FP16，其余算子的操作精度是 FP32，而具体哪些算子用 FP16，哪些用 FP32，不需要用户关心，amp 自动给它们都安排好了。这样在不改变模型、不降低模型训练精度的前提下，可以缩短训练时间，降低存储需求，因而能支持更多的 batch size、更大模型和尺寸更大的输入进行训练。PyTorch 从 1.6 以后（在此之前 OpenMMLab 已经支持混合精度训练，即 Fp16OptimizerHook），开始原生支持 amp，即torch.cuda.amp module。</p>
+</blockquote>
+<span id="more"></span>
+<p><code>torch.cuda.amp.autocast</code>可以自动对模型参数的dtype转换；<code>torch.cuda.amp.GradScaler</code>用于对梯度进行scaling操作，防止FP16的梯度数值溢出，而且在优化器更新参数前，会自动对梯度unscaling。<br>相关代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">main_worker</span>(<span class="params">gpu, ngpus_per_node, args</span>):</span><br><span class="line">    model = ...</span><br><span class="line">    criterion = ...</span><br><span class="line">    optimizer = ...</span><br><span class="line">    scheduler = ...</span><br><span class="line">    train_loader = ...</span><br><span class="line"></span><br><span class="line">    <span class="comment"># **********GradScaler对象用来自动做梯度缩放**********</span></span><br><span class="line">    torch_scaler = torch.cuda.amp.GradScaler()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(args.epochs):</span><br><span class="line">        <span class="keyword">for</span> i, (images, target) <span class="keyword">in</span> <span class="built_in">enumerate</span>(train_loader):</span><br><span class="line">            ...</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># **********前向过程(model+loss)开启autocast**********</span></span><br><span class="line">            <span class="keyword">with</span> torch.cuda.amp.autocast():</span><br><span class="line">                output = model(images)</span><br><span class="line">                loss = criterion(output, target)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># **********由于半精度数值范围有限，损失需要放大**********</span></span><br><span class="line">            torch_scaler.scale(loss).backward()</span><br><span class="line">            torch_scaler.step(optimizer)</span><br><span class="line">            torch_scaler.update()</span><br><span class="line">        ...</span><br></pre></td></tr></table></figure>
+<p>分布式训练结合amp的训练代码示例如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">myargs</span>():</span><br><span class="line">    parser = argparse.ArgumentParser(description=<span class="string">&#x27;training example&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--batch_size&#x27;</span>, default=<span class="number">256</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;this is the total batch size of all GPUs on the current node when using Distributed Data Parallel&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--workers&#x27;</span>, default=<span class="number">8</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;number of data loading workers&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--epochs&#x27;</span>, default=<span class="number">100</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;number of total epochs to run&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--seed&#x27;</span>, default=<span class="number">20</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;seed for initializing training.&#x27;</span>)</span><br><span class="line">    <span class="comment"># 分布式训练相关</span></span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--dist_url&#x27;</span>, default=<span class="string">&#x27;tcp://127.0.0.1:23456&#x27;</span>, <span class="built_in">type</span>=<span class="built_in">str</span>, <span class="built_in">help</span>=<span class="string">&#x27;url used to set up distributed training&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--dist_backend&#x27;</span>, default=<span class="string">&#x27;nccl&#x27;</span>, <span class="built_in">type</span>=<span class="built_in">str</span>, <span class="built_in">help</span>=<span class="string">&#x27;distributed backend&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--world_size&#x27;</span>, default=<span class="number">1</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;number of nodes for distributed training&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--rank&#x27;</span>, default=<span class="number">0</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;node rank for distributed training&#x27;</span>)</span><br><span class="line">    parser.add_argument(<span class="string">&#x27;--gpu&#x27;</span>, default=<span class="literal">None</span>, <span class="built_in">type</span>=<span class="built_in">int</span>, <span class="built_in">help</span>=<span class="string">&#x27;GPU id to use.&#x27;</span>)</span><br><span class="line">    myargs = parser.parse_args()</span><br><span class="line">    <span class="keyword">return</span> myargs</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main_worker</span>(<span class="params">gpu, ngpus_per_node, args</span>):</span><br><span class="line">    <span class="comment"># 这边设定随机种子，benchmark设定为False，原因？</span></span><br><span class="line">    random.seed(myargs.random_seed)</span><br><span class="line">    np.random.seed(myargs.random_seed)</span><br><span class="line">    torch.manual_seed(myargs.random_seed)</span><br><span class="line">    torch.cuda.manual_seed_all(myargs.random_seed)</span><br><span class="line">    torch.backends.cudnn.deterministic = <span class="literal">True</span></span><br><span class="line">    torch.backends.cudnn.benchmark = <span class="literal">False</span></span><br><span class="line">	</span><br><span class="line">    <span class="comment"># spawn传进来的局部rank号，即GPU号</span></span><br><span class="line">    args.gpu = gpu</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Use GPU: &#123;&#125; for distributed training&quot;</span>.<span class="built_in">format</span>(args.gpu))</span><br><span class="line">	</span><br><span class="line">    <span class="comment"># init_process_group需传入当前进程的全局rank号</span></span><br><span class="line">    args.rank = args.rank * ngpus_per_node + gpu  <span class="comment"># 全局rank</span></span><br><span class="line">    dist.init_process_group(backend=args.dist_backend, init_method=args.dist_url, world_size=args.world_size, rank=args.rank)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义模型，修改batch_size，num_workers</span></span><br><span class="line">    model = resnet50()</span><br><span class="line">    torch.cuda.set_device(args.gpu)  <span class="comment"># 设置device为当前gpu</span></span><br><span class="line">    model.cuda(args.gpu)</span><br><span class="line">    args.batch_size = <span class="built_in">int</span>(args.batch_size / ngpus_per_node)  <span class="comment"># 得到单个GPU上的batch_size</span></span><br><span class="line">    args.workers = <span class="built_in">int</span>((args.workers + ngpus_per_node - <span class="number">1</span>) / ngpus_per_node)</span><br><span class="line">    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.gpu])</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义损失、optimizer、scheduler</span></span><br><span class="line">    criterion = torch.nn.CrossEntropyLoss().cuda(args.gpu)</span><br><span class="line">    optimizer = torch.optim.SGD(model.parameters(), <span class="number">0.1</span>, momentum=<span class="number">0.9</span>, weight_decay=<span class="number">1e-4</span>)</span><br><span class="line">    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=<span class="number">30</span>, gamma=<span class="number">0.1</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 需定义数据sampler</span></span><br><span class="line">    train_sampler = torch.utils.data.distributed.DistributedSampler(train_dataset)</span><br><span class="line">    train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=<span class="literal">False</span>, sampler=train_sampler, num_workers=args.workers, pin_memory=<span class="literal">True</span>, drop_last=<span class="literal">True</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># **********GradScaler对象用来自动做梯度缩放**********</span></span><br><span class="line">    torch_scaler = torch.cuda.amp.GradScaler()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(args.epochs):</span><br><span class="line">        <span class="comment"># 保证每个进程拿到的数据不一样</span></span><br><span class="line">        train_sampler.set_epoch(epoch)</span><br><span class="line"></span><br><span class="line">        model.train()</span><br><span class="line">        <span class="keyword">for</span> i, (images, target) <span class="keyword">in</span> <span class="built_in">enumerate</span>(train_loader):</span><br><span class="line">            optimizer.zero_grad()</span><br><span class="line">            </span><br><span class="line">            images = images.cuda(args.gpu, non_blocking=<span class="literal">True</span>)</span><br><span class="line">            target = target.cuda(args.gpu, non_blocking=<span class="literal">True</span>)</span><br><span class="line">			</span><br><span class="line">            <span class="comment"># **********前向过程(model+loss)开启autocast**********</span></span><br><span class="line">            <span class="keyword">with</span> torch.cuda.amp.autocast():</span><br><span class="line">                output = model(images)</span><br><span class="line">                loss = criterion(output, target)</span><br><span class="line">			</span><br><span class="line">            <span class="comment"># **********由于半精度数值范围有限，损失需要放大**********</span></span><br><span class="line">            torch_scaler.scale(loss).backward()</span><br><span class="line">            torch_scaler.step(optimizer)</span><br><span class="line">            torch_scaler.update()</span><br><span class="line"></span><br><span class="line">        scheduler.step()</span><br><span class="line">        <span class="keyword">if</span> args.rank % ngpus_per_node == <span class="number">0</span>:</span><br><span class="line">            torch.save(model.module.state_dict(), <span class="string">&#x27;checkpoint.pth.tar&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    torch.cuda.empty_cache()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    args = myargs()</span><br><span class="line"></span><br><span class="line">    ngpus_per_node = torch.cuda.device_count()  <span class="comment"># 一个机子的GPU数</span></span><br><span class="line">    args.world_size = ngpus_per_node * args.world_size  <span class="comment"># 所有机子总的GPU数</span></span><br><span class="line">    torch.multiprocessing.spawn(main_worker, nprocs=ngpus_per_node, args=(ngpus_per_node, args))</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>PyTorch训练</category>
+      </categories>
+      <tags>
+        <tag>PyTorch</tag>
+      </tags>
+  </entry>
+</search>
