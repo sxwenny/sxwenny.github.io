@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ECCV 2020 Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</title>
-    <url>/2020/12/05/ECCV-2020-Unsupervised-Domain-Adaptation-with-Noise-Resistible-Mutual-Training-for-Person-Re-identification/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/1391_ECCV_2020_paper.php">Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</a><br>Fang Zhao, Shengcai Liao, Guo-Sen Xie, Jian Zhao, Kaihao Zhang, Ling Shao.<br>Inception Institute of Artificial Intelligence.</p>
-</blockquote>
-<h2 id="行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。"><a href="#行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。" class="headerlink" title="行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。"></a>行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。<br><span id="more"></span></h2><h2 id="Mutual-Training-with-Collaborative-Clustering"><a href="#Mutual-Training-with-Collaborative-Clustering" class="headerlink" title="Mutual-Training with Collaborative Clustering"></a>Mutual-Training with Collaborative Clustering</h2><p><img src="/download/4.png"></p>
-<blockquote>
-<p>Usually noisy instances caused by clustering are relatively hard examples, thus if one instance is assigned two labels, the networks will fit the clean (easy) one first to become robust and the error may be eliminated at the next iteration.</p>
-</blockquote>
-<h2 id="Mutual-Instance-Selection"><a href="#Mutual-Instance-Selection" class="headerlink" title="Mutual Instance Selection"></a>Mutual Instance Selection</h2><h3 id="Reliable-Instance-Selection-by-Peer-Confidence"><a href="#Reliable-Instance-Selection-by-Peer-Confidence" class="headerlink" title="Reliable Instance Selection by Peer-Confidence"></a>Reliable Instance Selection by Peer-Confidence</h3><p><img src="/download/5.png"><br><img src="/download/6.png"></p>
-<h3 id="Informative-Instance-Selection-by-Relationship-Disagreement"><a href="#Informative-Instance-Selection-by-Relationship-Disagreement" class="headerlink" title="Informative Instance Selection by Relationship Disagreement"></a>Informative Instance Selection by Relationship Disagreement</h3><p><img src="/download/7.png"><br><img src="/download/8.png"><br>Only the clean and informative triplets are used for the network update.</p>
-<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p><img src="/download/9.png"></p>
-]]></content>
-      <categories>
-        <category>paper</category>
-      </categories>
-      <tags>
-        <tag>re-ID</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Anaconda 和 Python</title>
     <url>/2020/10/15/Anaconda%E5%92%8CPython/</url>
     <content><![CDATA[<p>由于旧博客的文档没有备份，只能重新弄了github账户，重搭了博客，博客搭建参考增瑞师兄<a href="https://darlewo.cn/Github_Actions_Blog_Automation_deploying.html">Github Actions全自动博客部署</a>，<a href="https://zhuanlan.zhihu.com/p/251383216">hexo主题安装以及next8.0主题美化</a>。</p>
@@ -46,6 +25,27 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ECCV 2020 Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</title>
+    <url>/2020/12/05/ECCV-2020-Unsupervised-Domain-Adaptation-with-Noise-Resistible-Mutual-Training-for-Person-Re-identification/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/html/1391_ECCV_2020_paper.php">Unsupervised Domain Adaptation with Noise Resistible Mutual-Training for Person Re-identification</a><br>Fang Zhao, Shengcai Liao, Guo-Sen Xie, Jian Zhao, Kaihao Zhang, Ling Shao.<br>Inception Institute of Artificial Intelligence.</p>
+</blockquote>
+<h2 id="行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。"><a href="#行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。" class="headerlink" title="行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。"></a>行人重识别无监督域自适应，为了抑制无监督聚类时产生的标签噪声，使用了两个结构相同只是随机性不同的网络进行信息交互。首先提出了一个损失函数，使用两个网络产生的伪标签一起对单个网络进行监督；然后提出两个标准进行训练时样本的挑选。<br><span id="more"></span></h2><h2 id="Mutual-Training-with-Collaborative-Clustering"><a href="#Mutual-Training-with-Collaborative-Clustering" class="headerlink" title="Mutual-Training with Collaborative Clustering"></a>Mutual-Training with Collaborative Clustering</h2><p><img src="/download/4.png"></p>
+<blockquote>
+<p>Usually noisy instances caused by clustering are relatively hard examples, thus if one instance is assigned two labels, the networks will fit the clean (easy) one first to become robust and the error may be eliminated at the next iteration.</p>
+</blockquote>
+<h2 id="Mutual-Instance-Selection"><a href="#Mutual-Instance-Selection" class="headerlink" title="Mutual Instance Selection"></a>Mutual Instance Selection</h2><h3 id="Reliable-Instance-Selection-by-Peer-Confidence"><a href="#Reliable-Instance-Selection-by-Peer-Confidence" class="headerlink" title="Reliable Instance Selection by Peer-Confidence"></a>Reliable Instance Selection by Peer-Confidence</h3><p><img src="/download/5.png"><br><img src="/download/6.png"></p>
+<h3 id="Informative-Instance-Selection-by-Relationship-Disagreement"><a href="#Informative-Instance-Selection-by-Relationship-Disagreement" class="headerlink" title="Informative Instance Selection by Relationship Disagreement"></a>Informative Instance Selection by Relationship Disagreement</h3><p><img src="/download/7.png"><br><img src="/download/8.png"><br>Only the clean and informative triplets are used for the network update.</p>
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p><img src="/download/9.png"></p>
+]]></content>
+      <categories>
+        <category>paper</category>
+      </categories>
+      <tags>
+        <tag>re-ID</tag>
       </tags>
   </entry>
   <entry>
@@ -88,26 +88,17 @@
       </tags>
   </entry>
   <entry>
-    <title>PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</title>
-    <url>/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/</url>
+    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
+    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
     <content><![CDATA[<blockquote>
-<p><a href="https://www.sciencedirect.com/science/article/pii/S003132031930473X">Unsupervised domain adaptive re-identification: Theory and practice</a><br><a href="https://github.com/LcDog/DomainAdaptiveReID">https://github.com/LcDog/DomainAdaptiveReID</a><br>Liangchen Song, Cheng Wang, Lefei Zhang, et al.<br>Wuhan University, Horizon Robotics, Huazhong University of Science and Technology.</p>
+<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
 </blockquote>
-<h2 id="将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。"><a href="#将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。" class="headerlink" title="将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。"></a>将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。<br><span id="more"></span></h2><h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><p><img src="/download/1.png"></p>
-<blockquote>
-<p>In the context of re-ID tasks, two questions are of concern:<br>1.Under what conditions are unsupervised domain adaptive re-ID tasks DA-learnable?<br>2.How does the theoretical conditions help practical algorithms?</p>
+<h2 id="相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering-and-Fine-tuning。提出Progressive-Unsupervised-Learning-PUL-方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced-learning的思路选择可靠的样本进行训练。"><a href="#相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering-and-Fine-tuning。提出Progressive-Unsupervised-Learning-PUL-方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced-learning的思路选择可靠的样本进行训练。" class="headerlink" title="相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。"></a>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。<br><span id="more"></span></h2><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
+<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
+<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
 </blockquote>
-<p>对于问题1，根据论文[1]对分类任务做的3个假设，提出re-ID中的3个假设：</p>
-<ol>
-<li><strong>covariate assumption</strong>: the criteria of classifying feature pairs is the same between two domains;</li>
-<li><strong>Separately Probabilistic Lipschitzness</strong>: the feature pairs can be divided into clusters;</li>
-<li><strong>weight ratio</strong>: concerning the probability of existing a repeated feature among all the features from the two domains.</li>
-</ol>
-<p>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</p>
-<p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.</p>
-<p>根据上述假设, we propose several loss functions on the encoder and samples with guessed label. And the problem of selecting which sample with guessed label to train is optimized by minimizing the proposed loss functions.<br>For the Separately Probabilistic Lipschitzness assumption, we wish to minimize the intra-cluster and maximize inter-cluster distance. Then the sample selecting problem is turned into <strong>data clustering</strong> problem and minimizing loss functions is transformed into finding a <strong>distance metric</strong> for the data.<br>Further, another metric for Weight Ratio is designed.<br>After combining the two metrics together, we end up with a distance evaluating the confidence of the guessed labels.<br>Finally, the DBSCAN clustering method is employed to generate data clusters according to a threshold on the distance. With pseudo-labels on selected data cluster from target domain, the encoder is trained with triplet loss.</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br><img src="/download/3.png"><br>假设2和3最后实现时转变成设计distance metric，用k-reciprocal encoding计算距离，再用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
-<p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
+<p><img src="/download/12.png"></p>
 ]]></content>
       <categories>
         <category>paper</category>
@@ -273,17 +264,26 @@
       </tags>
   </entry>
   <entry>
-    <title>TOMM 2018 Unsupervised Person Re-identification: Clustering and Fine-tuning</title>
-    <url>/2020/12/07/TOMM-2018-Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning/</url>
+    <title>PR 2020 Unsupervised domain adaptive re-identification: Theory and practice</title>
+    <url>/2020/11/26/PR-2020-Unsupervised-domain-adaptive-re-identification-Theory-and-practice/</url>
     <content><![CDATA[<blockquote>
-<p><a href="https://dl.acm.org/doi/10.1145/3243316">Unsupervised Person Re-identification: Clustering and Fine-tuning</a><br><a href="https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning">https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning</a><br>Hehe Fan, Liang Zheng, Chenggang Yan, Yi Yang.<br>Hangzhou Dianzi University, University of Technology Sydney.</p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S003132031930473X">Unsupervised domain adaptive re-identification: Theory and practice</a><br><a href="https://github.com/LcDog/DomainAdaptiveReID">https://github.com/LcDog/DomainAdaptiveReID</a><br>Liangchen Song, Cheng Wang, Lefei Zhang, et al.<br>Wuhan University, Horizon Robotics, Huazhong University of Science and Technology.</p>
 </blockquote>
-<h2 id="相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering-and-Fine-tuning。提出Progressive-Unsupervised-Learning-PUL-方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced-learning的思路选择可靠的样本进行训练。"><a href="#相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering-and-Fine-tuning。提出Progressive-Unsupervised-Learning-PUL-方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced-learning的思路选择可靠的样本进行训练。" class="headerlink" title="相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。"></a>相关工作介绍很详细，首次提出在无监督的行人重识别上进行Clustering and Fine-tuning。提出Progressive Unsupervised Learning (PUL)方法，不停地迭代进行clustering和fine-tuning；还进行了样本选择操作，以self-paced learning的思路选择可靠的样本进行训练。<br><span id="more"></span></h2><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><img src="/download/10.png"></p>
-<h2 id="优化目标"><a href="#优化目标" class="headerlink" title="优化目标"></a>优化目标</h2><p>下列公式分别表示k-means分配伪标签、选择可靠样本、用伪标签进行分类训练。<br><img src="/download/11.png"></p>
-<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><blockquote>
-<p>In practice, we use cosine to measure the similarity between two feature vectors.<br>To guarantee each cluster contains at least one reliable sample, we choose the nearest feature to the corresponding centroid as the center of the cluster.<br>When the number of selected reliable samples is saturated, the algorithm will converge.</p>
+<h2 id="将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。"><a href="#将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。" class="headerlink" title="将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。"></a>将分类任务中的无监督域自适应理论扩展到re-ID，在特征空间上引入一些假设，并根据这些假设导出损失函数，提出了self-training框架最小化损失函数。<br><span id="more"></span></h2><h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><p><img src="/download/1.png"></p>
+<blockquote>
+<p>In the context of re-ID tasks, two questions are of concern:<br>1.Under what conditions are unsupervised domain adaptive re-ID tasks DA-learnable?<br>2.How does the theoretical conditions help practical algorithms?</p>
 </blockquote>
-<p><img src="/download/12.png"></p>
+<p>对于问题1，根据论文[1]对分类任务做的3个假设，提出re-ID中的3个假设：</p>
+<ol>
+<li><strong>covariate assumption</strong>: the criteria of classifying feature pairs is the same between two domains;</li>
+<li><strong>Separately Probabilistic Lipschitzness</strong>: the feature pairs can be divided into clusters;</li>
+<li><strong>weight ratio</strong>: concerning the probability of existing a repeated feature among all the features from the two domains.</li>
+</ol>
+<p>Based on the three assumptions, we then show the DA-learnability of unsupervised domain adaptive re-ID tasks.</p>
+<p>对于问题2，提出self-training框架来训练encoder。Concretely, we iteratively refine the encoder by making guesses on unlabeled target domain and then train the encoder with these samples.</p>
+<p>根据上述假设, we propose several loss functions on the encoder and samples with guessed label. And the problem of selecting which sample with guessed label to train is optimized by minimizing the proposed loss functions.<br>For the Separately Probabilistic Lipschitzness assumption, we wish to minimize the intra-cluster and maximize inter-cluster distance. Then the sample selecting problem is turned into <strong>data clustering</strong> problem and minimizing loss functions is transformed into finding a <strong>distance metric</strong> for the data.<br>Further, another metric for Weight Ratio is designed.<br>After combining the two metrics together, we end up with a distance evaluating the confidence of the guessed labels.<br>Finally, the DBSCAN clustering method is employed to generate data clusters according to a threshold on the distance. With pseudo-labels on selected data cluster from target domain, the encoder is trained with triplet loss.</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><img src="/download/2.png"><br><img src="/download/3.png"><br>假设2和3最后实现时转变成设计distance metric，用k-reciprocal encoding计算距离，再用DBSCAN进行聚类，DBSCAN参数中的阈值是根据距离取的，最后根据选择的数据的伪标签用triplet loss训练。</p>
+<p>[1] S.Ben-David, R.Urner. Domain adaptation-can quantity compensate for quality? Ann. Math. Artif. Intell. 70 (3) (2014) 185–202.</p>
 ]]></content>
       <categories>
         <category>paper</category>
@@ -481,12 +481,6 @@
       </tags>
   </entry>
   <entry>
-    <title>阅读记录</title>
-    <url>/2023/10/20/%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="2022-2023"><a href="#2022-2023" class="headerlink" title="2022-2023"></a>2022-2023</h2><p>在kindle和微信读书 读完《明朝那些事儿》《三体》《长安的荔枝》《生死疲劳》《活着》《白鹿原》《千江有水千江月》《蛙》《平凡的世界》《钟鼓楼》《在细雨中呼喊》《受戒》《人间草木》，未完成《西南联大求学日记》《显微镜下的大明》。<br>8月发现杭州图书馆的一键借阅，“你选书我买单”活动，便开始在钟书阁借新书。还是纸质书籍看的舒服，而且还是新书，太满足了，开始我的读书之旅。《岁寒三友》《倾城之恋》《置身室内》《繁花》《围城》《呐喊》；《故事新编》《许三观卖血记》。</p>
-]]></content>
-  </entry>
-  <entry>
     <title>自动混合精度AMP</title>
     <url>/2022/04/05/%E8%87%AA%E5%8A%A8%E6%B7%B7%E5%90%88%E7%B2%BE%E5%BA%A6AMP/</url>
     <content><![CDATA[<p>上一篇总结了PyTorch，这一篇总结下自动混合精度AMP训练。<br>参考<a href="https://pytorch.org/docs/stable/amp.html?highlight=amp#module-torch.cuda.amp">AUTOMATIC MIXED PRECISION PACKAGE</a>，<a href="https://zhuanlan.zhihu.com/p/165152789">PyTorch的自动混合精度（AMP）</a>，<a href="https://zhuanlan.zhihu.com/p/348554267">PyTorch 源码解读之 torch.cuda.amp: 自动混合精度详解</a>。</p>
@@ -504,5 +498,11 @@
       <tags>
         <tag>PyTorch</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>阅读记录</title>
+    <url>/2023/10/20/%E9%98%85%E8%AF%BB%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="2022-2023"><a href="#2022-2023" class="headerlink" title="2022-2023"></a>2022-2023</h2><p>在kindle和微信读书 读完《明朝那些事儿》《三体》《长安的荔枝》《生死疲劳》《活着》《白鹿原》《千江有水千江月》《蛙》《平凡的世界》《钟鼓楼》《在细雨中呼喊》《受戒》《人间草木》，未完成《西南联大求学日记》《显微镜下的大明》。<br>8月发现杭州图书馆的一键借阅，“你选书我买单”活动，便开始在钟书阁借新书。还是纸质书籍看的舒服，而且还是新书，太满足了，开始我的读书之旅。《岁寒三友》《倾城之恋》《置身室内》《繁花》《围城》《呐喊》；《故事新编》《许三观卖血记》。</p>
+]]></content>
   </entry>
 </search>
